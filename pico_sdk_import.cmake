@@ -1,6 +1,7 @@
 # this file locates the pico sdk, configures the cross-copiler, and makes all sdk libraries avalible
 
-if (DEFINED ENV{PICO_SDK_PATH} AND (NOT PICO_SDK_PATH))
+#change the if statmeent maybe
+if (DEFINED ENV{PICO_SDK_PATH} AND (NOT PICO_SDK_PATH)) # add different for env. 
     set(PICO_SDK_PATH $ENV{PICO_SDK_PATH})
     message("Using PICO_SDK_PATH from environment ('${PICO_SDK_PATH}')")
 endif()
