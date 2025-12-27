@@ -12,6 +12,8 @@ void matrix_int(void); // this initializes the matrix
 uint16_t matrix_scan(void); // this scans the matrix and returns a bitmask of which key is pressed
 // a bitmask is just a 16 bit integer whose position with a 1 is the key pressed
 
+bool matrix_key_pressed(uint8_t key_index);
+bool matrix_key_released(uint8_t key_index);
 
 
 #endif // closes if statement

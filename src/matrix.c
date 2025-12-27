@@ -66,7 +66,7 @@ uint16_t matrix_scan(void) {
                 if (pressed != was_pressed) { // checks if was pressed and pressed differ, meaning teh key state just changed
                     debounce_time[key_index] = now;
                     if (pressed) {
-                        new_state |= (1 << key_index /* creates pattern of key index*/); // uses the OR operator, which does not change the 1 of 1 but adds anotehr 1
+                        new_state |= (1 << key_index /* creates pattern of key index*/); // uses the OR operator
                     }
                 } else if (pressed) { // checks if key was pressed but its the same as was pressed
                     new_state |= (1 << key_index); // this is here for sustained presses
@@ -89,4 +89,28 @@ uint16_t matrix_scan(void) {
     }
     current_state = new_state; // sets the new current state to the new state
     return current_state;
+}
+
+bool matrix_key_pressed(uint8_t key_index) {
+    uint16_t changed = current_state ^ previous_state; // ^ is the XOR operator, which detects bits changed
+    // this returns which key changed
+    // lets say nothing was pressed at first, and then key 4 was pressed:
+    // current_state = 0b000010000, previous_state = 0b000000000
+    // the only thing that changed is that 1, so the changed = 0b000010000
+
+    return (changed & (1 << key_index)) && (current_state & (1 << key_index));
+
+    // checks if 2 boolean conditions are the same, and opperates with an AND gate
+    // the first part: it does and and procedure. if the changed = key_index, this evaluates to true
+    // the second part: it checks if the current state and the key position are teh same. if so, this evaluates to true
+    // so, this function returns true iff changed and current state are the same key as the key_index
+
+}
+
+bool matrix_key_released(uint8_t key_index) {
+    uint16_t changed = current_state ^ previous_state;
+    // same logic as above, when a key changes the change is recorded
+
+    return (changed & (1 << key_index)) && !(current_state & (1 << key_index))
+    // returns true f the change is the key index, but is not hte current state, implying the key is released
 }
