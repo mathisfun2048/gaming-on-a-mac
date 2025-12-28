@@ -11,13 +11,13 @@
 // " ", W, A, S, D, U, D, L, R, S, M, O, E
 
 // so i'm going to hardcode these values as pixels because eh
-// i'll have the dimensions be 5x7: 5 pixels wide, 7 pixels tall
+// i'll have the dimensions be 5x8: 5 pixels wide, 8 pixels tall
 
 satic const uint8_t [][5]{
     {0x00, 0x00, 0x00, 0x00, 0x00} // this is space! This has 5 cols with nothing! 
     {0x3F, 0x40, 0x38, 0x40, 0x3F} // W
-    {} // A
-    {} // S
+    {0x7E, 0x11, 0x11, 0x11, 0x7E} // A
+    {0x46, 0x49, 0x49, 0x49, 0x31} // S
     {} // D
     {} // U
     {} // L
@@ -50,5 +50,24 @@ W:
 01010
 00000
 
+A:
+01110
+10001
+10001
+10001
+11111
+10001
+10001
+10001
+
+S:
+01111
+10000
+10000
+01110
+00001
+00001
+11110
+00000
 
 */
