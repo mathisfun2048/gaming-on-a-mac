@@ -14,22 +14,27 @@
 // i'll have the dimensions be 5x7: 5 pixels wide, 7 pixels tall
 
 satic const uint8_t font5x7[][5]{
-    {0x00, 0x00, 0x00, 0x00, 0x00} // this is space! This has 5 cols with nothing! 
-    {0x3F, 0x40, 0x38, 0x40, 0x3F} // W
-    {0x7E, 0x11, 0x11, 0x11, 0x7E} // A
-    {0x46, 0x49, 0x49, 0x49, 0x31} // S
-    {0x7F, 0x41, 0x41, 0x22, 0x1C} // D
-    {0x3F, 0x40, 0x40, 0x40, 0x3F} // U
-    {0x7F, 0x40, 0x40, 0x40, 0x40} // L
-    {0x7F, 0x09, 0x19, 0x29, 0x46} // R
-    {0x7F, 0x08, 0x08, 0x08, 0x7F} // H
-    {0x7F, 0x09, 0x09, 0x09, 0x06} // P
-    {0x7F, 0x49, 0x49, 0x49, 0x41} // E
-    {0x01, 0x01, 0x7F, 0x01, 0x01} // T
-    {0x3E, 0x41, 0x41, 0x41, 0x3E} // O
-    {0x7F, 0x02, 0x0C, 0x02, 0x7F} // M
+    {0x00, 0x00, 0x00, 0x00, 0x00} // " " 0x20
+    {0x3F, 0x40, 0x38, 0x40, 0x3F} //  W  0x57
+    {0x7E, 0x11, 0x11, 0x11, 0x7E} //  A  0x41
+    {0x46, 0x49, 0x49, 0x49, 0x31} //  S  0x53
+    {0x7F, 0x41, 0x41, 0x22, 0x1C} //  D  0x44
+    {0x3F, 0x40, 0x40, 0x40, 0x3F} //  U  0x55
+    {0x7F, 0x40, 0x40, 0x40, 0x40} //  L  0x4C
+    {0x7F, 0x09, 0x19, 0x29, 0x46} //  R  0x52
+    {0x7F, 0x08, 0x08, 0x08, 0x7F} //  H  0x48
+    {0x7F, 0x09, 0x09, 0x09, 0x06} //  P  
+    {0x7F, 0x49, 0x49, 0x49, 0x41} //  E  
+    {0x01, 0x01, 0x7F, 0x01, 0x01} //  T  
+    {0x3E, 0x41, 0x41, 0x41, 0x3E} //  O  
+    {0x7F, 0x02, 0x0C, 0x02, 0x7F} //  M  
 
 }
+
+/* 
+hm im going to have to implement a dictionary becasue 
+*/
+
 // testing canvas to see how this looks
 /*
 space:
@@ -287,8 +292,51 @@ bool oled_init(void) {
 
     // initialization 
     oled_command(0xAE); // turns display off
-    oled_command(0xD5); // initalizes teh clock
-    oled_command(0x80); // sets contrast vlaue to 128
-    oled_command(0xA8); // set multiplex ratio
+    oled_command(0xD5); // ** initalizes teh clock
+    oled_command(0x80); // sets clock to defult frequency with divide ratio 1 
+    // the lower 4 bits is the divide ratio. Because this is equal to 0, it means it is the fastest refresh (though consumes more power)
+    // teh upper 4 bits is teh oscilater frequency, which is 8 
+    oled_command(0xA8); // ** set multiplex ratio command (next value will be multiplex ratio)
+    oled_command(0x1F); // we have 32 rows
+    oled_command(0xD3); // ** next command is going to set the dispay offset
+    oled_command(0x00); // don't offset it! 
+    oled_command(0x40); // start line: 0
+    oled_command(0x8D); // ** charge pump next command: OLED cannot work wiht the 3v3 supplied, it needs 7-14 volts 
+    oled_command(0x14); // sets charge pump to self-powered: we will supply 3v3, the oled will make the 7-14 volts
+    oled_command(0x20); // next command is going to show teh memory mode
+    oled_command(0x00); // memory mode is going to be horizontal -> this allows us to write down addresses for each col in a page, and then span that out for a page, and when done, wrap to the next page
+    oled_command(0xA1); // segment remap: we flip it horizontally (this is because of the physical wiring of my oled)
+    oled_command(0xC8); // COM scan direction (flip vertically) -> same reason, flip because of teh physical wiring
+    oled_command(0x81); // ** contrast!
+    oled_command(0x8F); // sets contrast at 143/255
+    oled_command(0xD9); // ** starts pre-charge period: charges OLED capacitors before writing data (oleds are technichally a capacitor)
+    oled_command(0xF1); // defines precharge period: 1 discharge time, 15 precharge time -> bright but mildly slow
+    oled_command(0xD8); // ** VCOMH deselect: sets voltage for unlit pixels
+    oled_command(0x40); // sets VCOMH deselct 
+    oled_command(0xA4); // display RAM content display
+    oled_command(0xA6); // normal display, not inverted (inverse means taht 0 -> on, 1 -> off) jklklk
+    oled_command(0xAF); // turns the display on!
 
+    oled_clear(); // clears the oled (nothing's on)
+    return true;
+}
+
+void oled_clear(void) {
+    memset(display_buffer, 0, sizeof(display_buffer)); // sets the entier buffer to zero
+}
+
+void oled_text(uint8_t x, uint8_t y, const char* str) {
+    // x is teh starting col [0-127] and y is the page number
+
+    if (y >= 4) return; // for our function, we only have 4 pages, so y cannot be 4 or greater
+
+    while (*str && x < OLED_WIDTH - 5) { // first we check if the address of the string exists, and then makes sure that we don't pring in the last 5 cols
+        uint8_t c = *str; // gets ascii of charachter
+
+        if(c >= 32 && c <= 95) { // checks if the charachter is printable
+            for (int i = 0; i < 5; i++) { // we're going to itterate through every collumn
+                display_buffer[y][x+i] = font5x7[/* to be implemented*/][i];
+            }
+        }
+    }
 }
