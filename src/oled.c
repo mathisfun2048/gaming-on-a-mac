@@ -175,7 +175,14 @@ M:
 */
 
 static uint8_t display_buffer[OLED_HEIGHT / 8][OLED_WIDTH] 
-// this speeds up display updates by chunking up the display. 
+// this speeds up display updates by chunking up the display
+// I want the display to look like this:
+// <LAYER NAME>
+// < first row of controls>
+// <second row of controls>
+// <third row of controls>
+// this in total is 4 layers, which is why we split it up into 4 128x8 chunks
+
 
 static void i2c_start(void) {
     gpio_set_dir(OLED_SDA_PIN, GPIO_OUT); // sets teh gpio pin to be an output pin
@@ -195,4 +202,59 @@ static void i2c_stop(void) {
     sleep_us(1); // mild time to make sure above ocnditions are set
     gpio_put(OLED_SDA_PIN, 1); // stop condition for I2C is low to high for SDA while SCL is on
     sleep_us(1); // mild time for it to stop
+}
+
+/*
+Before I go on, I should prob give a brief overview of what I2C is!
+- it stands for Inter-Integrated Circuit that contains 2 serial busses: SDA is data, and SCL is clock
+- protocol starts with SDA switching from high to low while SCL is high
+- master chips generates the clock and the slave chips respond, in our case the master is the rp2040 and the slave is the oled
+- (ik wierd namign convention but ece, ig)
+- master sends data to SDA when SCL is low
+- slave reads SDA when SCL is high
+- for every bit if information sent, the slave sent sends an ACK by pulling the SDA to low
+- e.x. when both SCL and SDA are high, that means the slave chip reads the data
+- e.x. cont. when the SDA then routes that SDA to ground, that pulls it down, which makes the GPIO read SDA as low, which is the ack
+- there's also a control byte that tells if the next bytes are command bytes or pixel data
+- e.x 0x00 means "interpret the next byte as a command"
+- e.x. 0x40 is a control signifier
+- heres the general sequence of information transmitted:
+- <start> -> 7-bit address -> ACK -> [Control] -> ACK -> [Data] -> ACK -> ... -> STOP
+
+OLED Specific:
+- our OLED contains teh SSD 1360 controller
+- it has 256 step brightness controls
+- based on our buffer earlier, we have 4 pages 8 pixles tall x 128 cols
+- byte is weritten to col N, page P controls pixels at (N, P*8) through (N, P*8+7); bit 0 = top of pixel of 8, bit 7 = bottom of pixel (this is exactly like we coded above!)
+- e.x. lets say we wanted to type a letter at position (10, 0) -> this menas at col 10 on the first page
+- e.x. cont. then, for each col in teh page, we will add the bits per our font table!
+
+*/
+
+static bool i2c_write_byte(uint8_t byte) {
+    gpio_set_dir(OLED_SDA_PIN, GPIO_OUT); // sets SDA to be out
+    for (int i = 7; i >= 0; i--) {
+        gpio_put(OLED_SDA_PIN, (byte >> i) & 1);
+        // this algorithm is pretty cool
+        // the for loop iterates between all the indecies of a byte, and we shift the index to the first slot in the byte
+        // we then mask it with 1 to see if its true, or false
+        // then, we can write to the oled sda if that index is true or false
+        // this way, we can read the boolean infromation we stored as numbers
+
+        sleep_us(1); // ensures that whatever state we wanted SDA to be put in, it achieves taht state
+        gpio_put(OLED_SCL_PIN, 1); // enables SCL pin which causes slave to read
+        sleep_us(1); // mild sleepy such that scl is high now and slave gets a chnace to read
+        gpio_put(OLED_SCL_PIN, 0); // low again so we can inpu tmore data
+        sleep_us(1); // mild nappy nap
+    }
+
+    gpio_set_dir(OLED_SDA_PIN, GPIO_IN);
+    gpio_put(OLED_SCL_PIN, 1);
+    sleep_us(1);
+    bool ack = !glio_get(OLED_SDA_PIN); // if ack sent, then SDA will read low, so we need the opposite of that
+    gpio_put(OLED_SCL_PIN, 0);
+    sleep_us(1);
+    // this above algorihtm checks if an ack message is sent
+
+    return ack;
 }
