@@ -13,7 +13,7 @@
 // so i'm going to hardcode these values as pixels because eh
 // i'll have the dimensions be 5x7: 5 pixels wide, 7 pixels tall
 
-satic const uint8_t [][5]{
+satic const uint8_t font5x7[][5]{
     {0x00, 0x00, 0x00, 0x00, 0x00} // this is space! This has 5 cols with nothing! 
     {0x3F, 0x40, 0x38, 0x40, 0x3F} // W
     {0x7E, 0x11, 0x11, 0x11, 0x7E} // A
@@ -257,4 +257,38 @@ static bool i2c_write_byte(uint8_t byte) {
     // this above algorihtm checks if an ack message is sent
 
     return ack;
+}
+
+static void oled_command(uint8_t cmd) {
+    i2c_start();
+    i2c_write_byte(OLED_ADDRESS << 1) // shifting left by one creates a 0 in the 0 bit index -> this means write mode (master -> slave); if this were a 1 instead, then it would be read mode (slave -> master)
+    i2c_write_byte(0x00); // this means expect a command
+    i2c_write_byte(cmd); // writes teh command
+    i2c_stop();
+}
+
+static void oled_data(uint8_t data) {
+    i2c_start();
+    i2c_write_byte[OLED_ADDRESS << 1]
+    i2c_write_byte(0x40); // this means expect some data
+    i2c_write_byte(data);
+    i2c_stop();
+}
+
+bool oled_init(void) {
+    gpio_init(OLED_SCL_PIN);
+    gpio_init(OLED_SDA_PIN);
+    gpio_set_dir(OLED_SCL_PIN, GPIO_OUT);
+    gpio_set_dir(OLED_SDA_PIN, GPIO_IN);
+    gpio_put(OLED_SCL_PIN, 1);
+    gpio_put(OLED_SDA_PIN, 1);
+
+    sleep_ms(100); // long sleep
+
+    // initialization 
+    oled_command(0xAE); // turns display off
+    oled_command(0xD5); // initalizes teh clock
+    oled_command(0x80); // sets contrast vlaue to 128
+    oled_command(0xA8); // set multiplex ratio
+
 }
