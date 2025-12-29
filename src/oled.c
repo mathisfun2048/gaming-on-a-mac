@@ -14,21 +14,55 @@
 // i'll have the dimensions be 5x7: 5 pixels wide, 7 pixels tall
 
 satic const uint8_t font5x7[][5]{
-    {0x00, 0x00, 0x00, 0x00, 0x00} // " " 0x20
-    {0x3F, 0x40, 0x38, 0x40, 0x3F} //  W  0x57
-    {0x7E, 0x11, 0x11, 0x11, 0x7E} //  A  0x41
-    {0x46, 0x49, 0x49, 0x49, 0x31} //  S  0x53
-    {0x7F, 0x41, 0x41, 0x22, 0x1C} //  D  0x44
-    {0x3F, 0x40, 0x40, 0x40, 0x3F} //  U  0x55
-    {0x7F, 0x40, 0x40, 0x40, 0x40} //  L  0x4C
-    {0x7F, 0x09, 0x19, 0x29, 0x46} //  R  0x52
-    {0x7F, 0x08, 0x08, 0x08, 0x7F} //  H  0x48
-    {0x7F, 0x09, 0x09, 0x09, 0x06} //  P  
-    {0x7F, 0x49, 0x49, 0x49, 0x41} //  E  
-    {0x01, 0x01, 0x7F, 0x01, 0x01} //  T  
-    {0x3E, 0x41, 0x41, 0x41, 0x3E} //  O  
-    {0x7F, 0x02, 0x0C, 0x02, 0x7F} //  M  
+    {0x00, 0x00, 0x00, 0x00, 0x00} // " " 0x20 0
+    {0x3F, 0x40, 0x38, 0x40, 0x3F} //  W  0x57 1
+    {0x7E, 0x11, 0x11, 0x11, 0x7E} //  A  0x41 2
+    {0x46, 0x49, 0x49, 0x49, 0x31} //  S  0x53 3
+    {0x7F, 0x41, 0x41, 0x22, 0x1C} //  D  0x44 4
+    {0x3F, 0x40, 0x40, 0x40, 0x3F} //  U  0x55 5
+    {0x7F, 0x40, 0x40, 0x40, 0x40} //  L  0x4C 6
+    {0x7F, 0x09, 0x19, 0x29, 0x46} //  R  0x52 7
+    {0x7F, 0x08, 0x08, 0x08, 0x7F} //  H  0x48 8
+    {0x7F, 0x09, 0x09, 0x09, 0x06} //  P  0x50 9
+    {0x7F, 0x49, 0x49, 0x49, 0x41} //  E  0x45 10
+    {0x01, 0x01, 0x7F, 0x01, 0x01} //  T  0x54 11
+    {0x3E, 0x41, 0x41, 0x41, 0x3E} //  O  0x4F 12
+    {0x7F, 0x02, 0x0C, 0x02, 0x7F} //  M  0x4D 13
 
+}
+
+static uint8_t ascii_to_font(uint8_t a) {
+    if(a == 0x20) {
+        return 0;
+    } elif (a == 0x57) {
+        return 1;
+    } elif (a == 0x41) {
+        return 2;
+    } elif (a == 0x53) {
+        return 3;
+    } elif (a == 0x44) {
+        return 4;
+    } elif (a == 0x55) {
+        return 5;
+    } elif (a == 0x4C) {
+        return 6;
+    } elif (a == 0x52) {
+        return 7;
+    } elif (a == 0x48) {
+        return 8;
+    } elif (a == 0x50) {
+        return 9;
+    } elif (a == 0x45) {
+        return 10;
+    } elif (a == 0x54) {
+        return 11
+    } elif (a == 0x4F) {
+        return 12;
+    } elif (a == 0x4D) {
+        return 13;
+    } else {
+        return 0; // returns space if char isn't defined
+    }
 }
 
 /* 
@@ -327,16 +361,45 @@ void oled_clear(void) {
 
 void oled_text(uint8_t x, uint8_t y, const char* str) {
     // x is teh starting col [0-127] and y is the page number
+    // str points to the first charachter of a string in memory
+    // e.x.: "Hi" in memory:
+    // e.x. cont: Address: 0x1000: 'H', 0x1001: 'i', 0x1002: '\0'
+    // e.x. const char* str points to 0x1000
 
     if (y >= 4) return; // for our function, we only have 4 pages, so y cannot be 4 or greater
 
-    while (*str && x < OLED_WIDTH - 5) { // first we check if the address of the string exists, and then makes sure that we don't pring in the last 5 cols
-        uint8_t c = *str; // gets ascii of charachter
+    while (*str && x < OLED_WIDTH - 5) { // first we check if the pointer dosn't point to the null char, and then makes sure that we don't pring in the last 5 cols
+        uint8_t c = *str; // gets ascii of charachter at the pointer
 
         if(c >= 32 && c <= 95) { // checks if the charachter is printable
             for (int i = 0; i < 5; i++) { // we're going to itterate through every collumn
-                display_buffer[y][x+i] = font5x7[/* to be implemented*/][i];
+
+                display_buffer[y][x+i] = font5x7[ascii_to_font(c)][i];
             }
+            x += 6 // advances cursor 5 pixels for charachter + 1 pixel for spacing
+        }
+        str++; // moves pointer to the next charachter
+    }
+}
+
+void oled_update(void) {
+    for(uint8_t page = 0; page < 4; page++) {
+        oled_command(0xB0 + page); // sets page num
+        oled_command(0x00); // sets col address lower 4 to 0
+        oled_command(0x10); // set col adress upper 4 bits to 0
+        // these above control which col index we start at
+
+        for(uint8_t col; col < oled_width; col++) { // we itterate through all 128 cols
+            oled_data(display_buffer[page][col]); // sends one byte to oled, increments
         }
     }
+} 
+
+void oled_draw_grid(const char* keys[9], const char* title) { // the keys array has 9 string pointers to represent our 9 keys, and title for our layer title
+    oled_clear(); // sets a blank canvas
+
+    oled_text(0, 0, title); // draws title
+
+    
+
 }
