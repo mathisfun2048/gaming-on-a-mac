@@ -173,3 +173,26 @@ M:
 00000
 
 */
+
+static uint8_t display_buffer[OLED_HEIGHT / 8][OLED_WIDTH] 
+// this speeds up display updates by chunking up the display. 
+
+static void i2c_start(void) {
+    gpio_set_dir(OLED_SDA_PIN, GPIO_OUT); // sets teh gpio pin to be an output pin
+    gpio_put(OLED_SDA_PIN, 1); // enables the sda pin
+    gpio_put(OLED_SCL_PIN, 1) // enables the scl pin
+    sleep_us(1); // mild delay to make sure that both pins are high 
+    gpio_put(OLED_SDA_PIN,0); // SDA being low while SCL is high is the start condition for I2C
+    sleep_us(1); // mild delay to make sure I2C has the opportunity to start
+    gpio_put(OLED_SCL_PIN, 0) // SCL can now be ready for data, so now its low
+    sleep_us(1); // mild setup time
+}
+
+static void i2c_stop(void) {
+    gpio_set_dir(OLED_SDA_PIN, GPIO_OUT); // enables gpio pin to be an output pin
+    gpio_put(OLED_SDA_PIN, 0); // make sure sda is low
+    gpio_put(OLED_SCL_PIN, 1); // meakes sure SCL is on
+    sleep_us(1); // mild time to make sure above ocnditions are set
+    gpio_put(OLED_SDA_PIN, 1); // stop condition for I2C is low to high for SDA while SCL is on
+    sleep_us(1); // mild time for it to stop
+}
