@@ -348,7 +348,7 @@ bool oled_init(void) {
     oled_command(0xD8); // ** VCOMH deselect: sets voltage for unlit pixels
     oled_command(0x40); // sets VCOMH deselct 
     oled_command(0xA4); // display RAM content display
-    oled_command(0xA6); // normal display, not inverted (inverse means taht 0 -> on, 1 -> off) jklklk
+    oled_command(0xA6); // normal display, not inverted (inverse means taht 0 -> on, 1 -> off) 
     oled_command(0xAF); // turns the display on!
 
     oled_clear(); // clears the oled (nothing's on)
@@ -400,6 +400,17 @@ void oled_draw_grid(const char* keys[9], const char* title) { // the keys array 
 
     oled_text(0, 0, title); // draws title
 
-    
+    const uint8_t cell_w = 42; // 128/3 ~ 42
 
+    for(int i = 0; i < 9; i++) {
+        uint8_t row = i / 3; // algorithm for calculating which row each key is in
+        uint8_t col = i % 3; // algorithm for claculating which col each key is in
+
+        uint8_t x = col * cell_w + 2;
+        uint8_t y = row + 1; // start at page 1 
+
+        oled_text(x, y, keys[i])
+    }
+
+    oled_update(); // updates oled after RAM is set
 }

@@ -18,6 +18,4 @@ void oled_update(void); // updates the oled
 
 void oled_draw_grid(const char* keys[9], const char* title); // draws on the oled
 
-
-
 #endif
