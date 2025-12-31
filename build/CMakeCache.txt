@@ -15,68 +15,92 @@
 ########################
 
 //Path to a program.
-CMAKE_ADDR2LINE:FILEPATH=CMAKE_ADDR2LINE-NOTFOUND
+CMAKE_ADDR2LINE:FILEPATH=/Applications/ARM/bin/arm-none-eabi-addr2line
 
 //Path to a program.
-CMAKE_AR:FILEPATH=/usr/bin/ar
+CMAKE_AR:FILEPATH=/Applications/ARM/bin/arm-none-eabi-ar
 
 //ASM compiler
-CMAKE_ASM_COMPILER:FILEPATH=/usr/bin/cc
+CMAKE_ASM_COMPILER:STRING=/Applications/ARM/bin/arm-none-eabi-gcc
+
+//A wrapper around 'ar' adding the appropriate '--plugin' option
+// for the GCC compiler
+CMAKE_ASM_COMPILER_AR:FILEPATH=/Applications/ARM/bin/arm-none-eabi-gcc-ar
+
+//A wrapper around 'ranlib' adding the appropriate '--plugin' option
+// for the GCC compiler
+CMAKE_ASM_COMPILER_RANLIB:FILEPATH=/Applications/ARM/bin/arm-none-eabi-gcc-ranlib
 
 //Flags used by the ASM compiler during all build types.
-CMAKE_ASM_FLAGS:STRING=
+CMAKE_ASM_FLAGS:STRING=-mcpu=cortex-m0plus -mthumb
 
 //Flags used by the ASM compiler during DEBUG builds.
-CMAKE_ASM_FLAGS_DEBUG:STRING=-g
+CMAKE_ASM_FLAGS_DEBUG:STRING=-Og -g
 
 //Flags used by the ASM compiler during MINSIZEREL builds.
-CMAKE_ASM_FLAGS_MINSIZEREL:STRING=-Os -DNDEBUG
+CMAKE_ASM_FLAGS_MINSIZEREL:STRING=-g -Os -DNDEBUG
 
 //Flags used by the ASM compiler during RELEASE builds.
-CMAKE_ASM_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
+CMAKE_ASM_FLAGS_RELEASE:STRING=-g -O3 -DNDEBUG
 
 //Flags used by the ASM compiler during RELWITHDEBINFO builds.
 CMAKE_ASM_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
-//Choose the type of build, options are: None Debug Release RelWithDebInfo
-// MinSizeRel ...
-CMAKE_BUILD_TYPE:STRING=
+//Choose the type of build, options are: 'Debug', 'Release', 'MinSizeRel',
+// 'RelWithDebInfo'.
+CMAKE_BUILD_TYPE:STRING=Release
 
 //Enable/Disable color output during build.
 CMAKE_COLOR_MAKEFILE:BOOL=ON
 
 //CXX compiler
-CMAKE_CXX_COMPILER:FILEPATH=/usr/bin/c++
+CMAKE_CXX_COMPILER:STRING=/Applications/ARM/bin/arm-none-eabi-g++
+
+//A wrapper around 'ar' adding the appropriate '--plugin' option
+// for the GCC compiler
+CMAKE_CXX_COMPILER_AR:FILEPATH=/Applications/ARM/bin/arm-none-eabi-gcc-ar
+
+//A wrapper around 'ranlib' adding the appropriate '--plugin' option
+// for the GCC compiler
+CMAKE_CXX_COMPILER_RANLIB:FILEPATH=/Applications/ARM/bin/arm-none-eabi-gcc-ranlib
 
 //Flags used by the CXX compiler during all build types.
-CMAKE_CXX_FLAGS:STRING=
+CMAKE_CXX_FLAGS:STRING=-mcpu=cortex-m0plus -mthumb
 
 //Flags used by the CXX compiler during DEBUG builds.
-CMAKE_CXX_FLAGS_DEBUG:STRING=-g
+CMAKE_CXX_FLAGS_DEBUG:STRING=-Og -g
 
 //Flags used by the CXX compiler during MINSIZEREL builds.
-CMAKE_CXX_FLAGS_MINSIZEREL:STRING=-Os -DNDEBUG
+CMAKE_CXX_FLAGS_MINSIZEREL:STRING=-g -Os -DNDEBUG
 
 //Flags used by the CXX compiler during RELEASE builds.
-CMAKE_CXX_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
+CMAKE_CXX_FLAGS_RELEASE:STRING=-g -O3 -DNDEBUG
 
 //Flags used by the CXX compiler during RELWITHDEBINFO builds.
 CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
 //C compiler
-CMAKE_C_COMPILER:FILEPATH=/usr/bin/cc
+CMAKE_C_COMPILER:STRING=/Applications/ARM/bin/arm-none-eabi-gcc
+
+//A wrapper around 'ar' adding the appropriate '--plugin' option
+// for the GCC compiler
+CMAKE_C_COMPILER_AR:FILEPATH=/Applications/ARM/bin/arm-none-eabi-gcc-ar
+
+//A wrapper around 'ranlib' adding the appropriate '--plugin' option
+// for the GCC compiler
+CMAKE_C_COMPILER_RANLIB:FILEPATH=/Applications/ARM/bin/arm-none-eabi-gcc-ranlib
 
 //Flags used by the C compiler during all build types.
-CMAKE_C_FLAGS:STRING=
+CMAKE_C_FLAGS:STRING=-mcpu=cortex-m0plus -mthumb
 
 //Flags used by the C compiler during DEBUG builds.
-CMAKE_C_FLAGS_DEBUG:STRING=-g
+CMAKE_C_FLAGS_DEBUG:STRING=-Og -g
 
 //Flags used by the C compiler during MINSIZEREL builds.
-CMAKE_C_FLAGS_MINSIZEREL:STRING=-Os -DNDEBUG
+CMAKE_C_FLAGS_MINSIZEREL:STRING=-g -Os -DNDEBUG
 
 //Flags used by the C compiler during RELEASE builds.
-CMAKE_C_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
+CMAKE_C_FLAGS_RELEASE:STRING=-g -O3 -DNDEBUG
 
 //Flags used by the C compiler during RELWITHDEBINFO builds.
 CMAKE_C_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
@@ -105,14 +129,11 @@ CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=
 //Value Computed by CMake.
 CMAKE_FIND_PACKAGE_REDIRECTS_DIR:STATIC=/Users/aryachakrabarti/Desktop/flavortown/gaming-on-a-mac/build/CMakeFiles/pkgRedirects
 
-//Path to a program.
-CMAKE_INSTALL_NAME_TOOL:FILEPATH=/usr/bin/install_name_tool
-
 //Install path prefix, prepended onto install directories.
 CMAKE_INSTALL_PREFIX:PATH=/usr/local
 
 //Path to a program.
-CMAKE_LINKER:FILEPATH=/usr/bin/ld
+CMAKE_LINKER:FILEPATH=/Applications/ARM/bin/arm-none-eabi-ld
 
 //Path to a program.
 CMAKE_MAKE_PROGRAM:FILEPATH=/usr/bin/make
@@ -138,24 +159,11 @@ CMAKE_MODULE_LINKER_FLAGS_RELEASE:STRING=
 CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 
 //Path to a program.
-CMAKE_NM:FILEPATH=/usr/bin/nm
+CMAKE_NM:FILEPATH=/Applications/ARM/bin/arm-none-eabi-nm
 
-//Path to a program.
-CMAKE_OBJCOPY:FILEPATH=CMAKE_OBJCOPY-NOTFOUND
+CMAKE_OBJCOPY:FILEPATH=/Applications/ARM/bin/arm-none-eabi-objcopy
 
-//Path to a program.
-CMAKE_OBJDUMP:FILEPATH=/usr/bin/objdump
-
-//Build architectures for OSX
-CMAKE_OSX_ARCHITECTURES:STRING=
-
-//Minimum OS X version to target for deployment (at runtime); newer
-// APIs weak linked. Set to empty string for default value.
-CMAKE_OSX_DEPLOYMENT_TARGET:STRING=
-
-//The product will be built against the headers and libraries located
-// inside the indicated SDK.
-CMAKE_OSX_SYSROOT:STRING=
+CMAKE_OBJDUMP:FILEPATH=/Applications/ARM/bin/arm-none-eabi-objdump
 
 //Value Computed by CMake
 CMAKE_PROJECT_COMPAT_VERSION:STATIC=
@@ -173,10 +181,10 @@ CMAKE_PROJECT_NAME:STATIC=mac-gaming
 CMAKE_PROJECT_SPDX_LICENSE:STATIC=
 
 //Path to a program.
-CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
+CMAKE_RANLIB:FILEPATH=/Applications/ARM/bin/arm-none-eabi-ranlib
 
 //Path to a program.
-CMAKE_READELF:FILEPATH=CMAKE_READELF-NOTFOUND
+CMAKE_READELF:FILEPATH=/Applications/ARM/bin/arm-none-eabi-readelf
 
 //Flags used by the linker during the creation of shared libraries
 // during all build types.
@@ -226,16 +234,104 @@ CMAKE_STATIC_LINKER_FLAGS_RELEASE:STRING=
 CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 
 //Path to a program.
-CMAKE_STRIP:FILEPATH=/usr/bin/strip
+CMAKE_STRIP:FILEPATH=/Applications/ARM/bin/arm-none-eabi-strip
 
 //Path to a program.
-CMAKE_TAPI:FILEPATH=/Library/Developer/CommandLineTools/usr/bin/tapi
+CMAKE_TAPI:FILEPATH=CMAKE_TAPI-NOTFOUND
+
+//The CMake toolchain file
+CMAKE_TOOLCHAIN_FILE:FILEPATH=/Users/aryachakrabarti/Desktop/pico-sdk/cmake/preload/toolchains/pico_arm_cortex_m0plus_gcc.cmake
 
 //If this value is on, makefiles will be generated without the
 // .SILENT directive, and all commands will be echoed to the console
 // during the make.  This is useful for debugging only. With Visual
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
+
+//Dot tool for use with Doxygen
+DOXYGEN_DOT_EXECUTABLE:FILEPATH=DOXYGEN_DOT_EXECUTABLE-NOTFOUND
+
+//Doxygen documentation generation tool (https://www.doxygen.nl)
+DOXYGEN_EXECUTABLE:FILEPATH=DOXYGEN_EXECUTABLE-NOTFOUND
+
+//Directory under which to collect all populated content
+FETCHCONTENT_BASE_DIR:PATH=/Users/aryachakrabarti/Desktop/flavortown/gaming-on-a-mac/build/_deps
+
+//Disables all attempts to download or update content and assumes
+// source dirs already exist
+FETCHCONTENT_FULLY_DISCONNECTED:BOOL=OFF
+
+//Enables QUIET option for all content population
+FETCHCONTENT_QUIET:BOOL=ON
+
+//Enables UPDATE_DISCONNECTED behavior for all content population
+FETCHCONTENT_UPDATES_DISCONNECTED:BOOL=OFF
+
+//PICO target board (e.g. pico, pico2)
+PICO_BOARD:STRING=pico
+
+//PICO board header directories
+PICO_BOARD_HEADER_DIRS:STRING=
+
+//Build HTML Doxygen docs
+PICO_BUILD_DOCS:BOOL=OFF
+
+//Path to a program.
+PICO_COMPILER_CC:FILEPATH=/Applications/ARM/bin/arm-none-eabi-gcc
+
+//Path to a program.
+PICO_COMPILER_CXX:FILEPATH=/Applications/ARM/bin/arm-none-eabi-g++
+
+//Default binaries to copy code to RAM when booting from flash
+PICO_COPY_TO_RAM:BOOL=OFF
+
+//Include debug info in release builds
+PICO_DEBUG_INFO_IN_RELEASE:BOOL=ON
+
+//boot stage 2 short name
+PICO_DEFAULT_BOOT_STAGE2:STRING=compile_time_choice
+
+//Build debug builds with -O0
+PICO_DEOPTIMIZED_DEBUG:BOOL=OFF
+
+//Default binaries to not not use flash
+PICO_NO_FLASH:BOOL=OFF
+
+//Path to a program.
+PICO_OBJCOPY:FILEPATH=/Applications/ARM/bin/arm-none-eabi-objcopy
+
+//Path to a program.
+PICO_OBJDUMP:FILEPATH=/Applications/ARM/bin/arm-none-eabi-objdump
+
+//PICO Build platform (e.g. rp2040, rp2350, rp2350-riscv,  host)
+PICO_PLATFORM:STRING=rp2040
+
+//Set to ON to fetch copy of SDK from git if not otherwise locatable
+PICO_SDK_FETCH_FROM_GIT:BOOL=
+
+//location to download SDK
+PICO_SDK_FETCH_FROM_GIT_PATH:FILEPATH=
+
+//release tag for SDK
+PICO_SDK_FETCH_FROM_GIT_TAG:FILEPATH=
+
+//Path to the Raspberry Pi Pico SDK
+PICO_SDK_PATH:PATH=/Users/aryachakrabarti/Desktop/pico-sdk
+
+//Globally enable stdio RTT
+PICO_STDIO_RTT:BOOL=OFF
+
+//Globally enable stdio semi-hosting
+PICO_STDIO_SEMIHOSTING:BOOL=OFF
+
+//Globally enable stdio UART
+PICO_STDIO_UART:BOOL=ON
+
+//Globally enable stdio USB
+PICO_STDIO_USB:BOOL=OFF
+
+//Directory where pioasm has been installed
+PIOASM_INSTALL_DIR:PATH=/Users/aryachakrabarti/Desktop/flavortown/gaming-on-a-mac/build/pioasm-install
 
 //Value Computed by CMake
 mac-gaming_BINARY_DIR:STATIC=/Users/aryachakrabarti/Desktop/flavortown/gaming-on-a-mac/build
@@ -245,6 +341,21 @@ mac-gaming_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 mac-gaming_SOURCE_DIR:STATIC=/Users/aryachakrabarti/Desktop/flavortown/gaming-on-a-mac
+
+//Value Computed by CMake
+pico_sdk_BINARY_DIR:STATIC=/Users/aryachakrabarti/Desktop/flavortown/gaming-on-a-mac/build/pico-sdk
+
+//Value Computed by CMake
+pico_sdk_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+pico_sdk_SOURCE_DIR:STATIC=/Users/aryachakrabarti/Desktop/pico-sdk
+
+//The directory containing a CMake configuration file for picotool.
+picotool_DIR:PATH=/usr/local/lib/cmake/picotool
+
+//The directory containing a CMake configuration file for pioasm.
+pioasm_DIR:PATH=pioasm_DIR-NOTFOUND
 
 
 ########################
@@ -257,6 +368,10 @@ CMAKE_ADDR2LINE-ADVANCED:INTERNAL=1
 CMAKE_AR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_ASM_COMPILER
 CMAKE_ASM_COMPILER-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_ASM_COMPILER_AR
+CMAKE_ASM_COMPILER_AR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_ASM_COMPILER_RANLIB
+CMAKE_ASM_COMPILER_RANLIB-ADVANCED:INTERNAL=1
 CMAKE_ASM_COMPILER_WORKS:INTERNAL=1
 //ADVANCED property for variable: CMAKE_ASM_FLAGS
 CMAKE_ASM_FLAGS-ADVANCED:INTERNAL=1
@@ -268,6 +383,8 @@ CMAKE_ASM_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
 CMAKE_ASM_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_ASM_FLAGS_RELWITHDEBINFO
 CMAKE_ASM_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
+//STRINGS property for variable: CMAKE_BUILD_TYPE
+CMAKE_BUILD_TYPE-STRINGS:INTERNAL=Debug;Release;MinSizeRel;RelWithDebInfo
 //This is the directory where this CMakeCache.txt was created
 CMAKE_CACHEFILE_DIR:INTERNAL=/Users/aryachakrabarti/Desktop/flavortown/gaming-on-a-mac/build
 //Major version of cmake used to create the current loaded cache
@@ -286,6 +403,10 @@ CMAKE_CPACK_COMMAND:INTERNAL=/usr/local/bin/cpack
 CMAKE_CTEST_COMMAND:INTERNAL=/usr/local/bin/ctest
 //ADVANCED property for variable: CMAKE_CXX_COMPILER
 CMAKE_CXX_COMPILER-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_CXX_COMPILER_AR
+CMAKE_CXX_COMPILER_AR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_CXX_COMPILER_RANLIB
+CMAKE_CXX_COMPILER_RANLIB-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_CXX_FLAGS
 CMAKE_CXX_FLAGS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_CXX_FLAGS_DEBUG
@@ -298,6 +419,10 @@ CMAKE_CXX_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 CMAKE_CXX_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_C_COMPILER
 CMAKE_C_COMPILER-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_C_COMPILER_AR
+CMAKE_C_COMPILER_AR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_C_COMPILER_RANLIB
+CMAKE_C_COMPILER_RANLIB-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_C_FLAGS
 CMAKE_C_FLAGS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_C_FLAGS_DEBUG
@@ -313,7 +438,7 @@ CMAKE_DLLTOOL-ADVANCED:INTERNAL=1
 //Path to cache edit program executable.
 CMAKE_EDIT_COMMAND:INTERNAL=/usr/local/bin/ccmake
 //Executable file format
-CMAKE_EXECUTABLE_FORMAT:INTERNAL=MACHO
+CMAKE_EXECUTABLE_FORMAT:INTERNAL=ELF
 //ADVANCED property for variable: CMAKE_EXE_LINKER_FLAGS
 CMAKE_EXE_LINKER_FLAGS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_EXE_LINKER_FLAGS_DEBUG
@@ -339,8 +464,6 @@ CMAKE_GENERATOR_TOOLSET:INTERNAL=
 //Source directory with the top level CMakeLists.txt file for this
 // project
 CMAKE_HOME_DIRECTORY:INTERNAL=/Users/aryachakrabarti/Desktop/flavortown/gaming-on-a-mac
-//ADVANCED property for variable: CMAKE_INSTALL_NAME_TOOL
-CMAKE_INSTALL_NAME_TOOL-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_LINKER
 CMAKE_LINKER-ADVANCED:INTERNAL=1
 //Name of CMakeLists files to read
@@ -360,7 +483,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=1
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=98
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -405,4 +528,49 @@ CMAKE_TAPI-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: DOXYGEN_DOT_EXECUTABLE
+DOXYGEN_DOT_EXECUTABLE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: DOXYGEN_EXECUTABLE
+DOXYGEN_EXECUTABLE-ADVANCED:INTERNAL=1
+FAMILY_MCUS:INTERNAL=RP2040
+//Details about finding Python3
+FIND_PACKAGE_MESSAGE_DETAILS_Python3:INTERNAL=[/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12][found components: Interpreter ][v3.12.3()]
+PICO_32BIT:INTERNAL=1
+PICO_ARM:INTERNAL=1
+PICO_BOOT_STAGE2_DIR:INTERNAL=/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2040/boot_stage2
+PICO_CMAKE_PRELOAD_PLATFORM_DIR:INTERNAL=/Users/aryachakrabarti/Desktop/pico-sdk/cmake/preload/platforms
+PICO_CMAKE_PRELOAD_PLATFORM_FILE:INTERNAL=/Users/aryachakrabarti/Desktop/pico-sdk/cmake/preload/platforms/rp2040.cmake
+PICO_CMSIS_DEVICE:INTERNAL=RP2040
+PICO_COMPILER_ASM:INTERNAL=/Applications/ARM/bin/arm-none-eabi-gcc
+PICO_DOXYGEN_ENABLED_SECTIONS:INTERNAL=rp2040_specific
+PICO_DOXYGEN_EXCLUDE_PATHS:INTERNAL=/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2040/hardware_regs;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/cmsis
+PICO_DOXYGEN_PATHS:INTERNAL=/Users/aryachakrabarti/Desktop/pico-sdk/src/common/boot_picobin_headers;/Users/aryachakrabarti/Desktop/pico-sdk/src/common/boot_picoboot_headers;/Users/aryachakrabarti/Desktop/pico-sdk/src/common/boot_uf2_headers;/Users/aryachakrabarti/Desktop/pico-sdk/src/common/pico_base_headers;/Users/aryachakrabarti/Desktop/pico-sdk/src/common/pico_usb_reset_interface_headers;/Users/aryachakrabarti/Desktop/pico-sdk/src/common/pico_bit_ops_headers;/Users/aryachakrabarti/Desktop/pico-sdk/src/common/pico_binary_info;/Users/aryachakrabarti/Desktop/pico-sdk/src/common/pico_divider_headers;/Users/aryachakrabarti/Desktop/pico-sdk/src/common/pico_sync;/Users/aryachakrabarti/Desktop/pico-sdk/src/common/pico_time;/Users/aryachakrabarti/Desktop/pico-sdk/src/common/pico_util;/Users/aryachakrabarti/Desktop/pico-sdk/src/common/pico_stdlib_headers;/Users/aryachakrabarti/Desktop/pico-sdk/src/common/hardware_claim;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2040/pico_platform;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2040/hardware_regs;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2040/hardware_structs;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2040/boot_stage2;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_base;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_adc;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_boot_lock;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_clocks;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_divider;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_dma;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_exception;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_flash;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_gpio;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_i2c;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_interp;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_irq;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_pio;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_pll;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_pwm;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_resets;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_rtc;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_spi;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_sync;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_sync_spin_lock;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_ticks;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_timer;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_uart;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_vreg;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_watchdog;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_xip_cache;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_xosc;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/boot_bootrom_headers;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_platform_common;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_platform_compiler;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_platform_sections;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_platform_panic;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_aon_timer;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_bootrom;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_bootsel_via_double_reset;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_multicore;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_unique_id;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_atomic;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_bit_ops;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_divider;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_double;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_int64_ops;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_flash;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_float;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_mem_ops;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_malloc;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_printf;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_rand;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_stdio_semihosting;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_stdio_uart;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_stdio_rtt;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/cmsis;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/tinyusb;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_stdio_usb;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_i2c_slave;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_async_context;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_btstack;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_cyw43_driver;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_mbedtls;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_lwip/tools;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_lwip;/Users/aryachakrabarti/Desktop/pico-sdk/lib/cyw43-driver/src;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_cyw43_arch;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_time_adapter;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_crt0;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_clib_interface;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_cxx_options;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_standard_binary_info;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_standard_link;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_fix;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_status_led;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_runtime_init;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_runtime;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_stdio;/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_stdlib;/Users/aryachakrabarti/Desktop/flavortown/gaming-on-a-mac/build/pico-sdk/src/extra_doxygen
+PICO_DOXYGEN_PRE_DEFINES:INTERNAL=PICO_RP2040=1;PICO_RP2350=0
+PICO_GCC_TRIPLE:INTERNAL=arm-none-eabi
+PICO_NO_HARDWARE:INTERNAL=0
+PICO_ON_DEVICE:INTERNAL=1
+PICO_PLATFORM_CMAKE_FILE:INTERNAL=/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2040.cmake
+//Saved CMAKE_TOOLCHAIN_FILE
+PICO_PREVIOUS_CMAKE_TOOLCHAIN_FILE:INTERNAL=/Users/aryachakrabarti/Desktop/pico-sdk/cmake/preload/toolchains/pico_arm_cortex_m0plus_gcc.cmake
+//Saved PICO Build platform (e.g. rp2040, rp2350, rp2350-riscv,
+//  host)
+PICO_PREVIOUS_PLATFORM:INTERNAL=rp2040
+PICO_RISCV:INTERNAL=0
+PICO_RP2040:INTERNAL=1
+PICO_RP2350:INTERNAL=0
+//Enable build of SDK tests
+PICO_SDK_TESTS_ENABLED:INTERNAL=
+PICO_TOOLCHAIN_PATH:INTERNAL=
+PICO_TOOLS_DIR:INTERNAL=/Users/aryachakrabarti/Desktop/pico-sdk/tools
+//Compiler reason failure
+_Python3_Compiler_REASON_FAILURE:INTERNAL=
+//Development reason failure
+_Python3_Development_REASON_FAILURE:INTERNAL=
+//Path to a program.
+_Python3_EXECUTABLE:INTERNAL=/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12
+//Python3 Properties
+_Python3_INTERPRETER_PROPERTIES:INTERNAL=Python;3;12;3;32;64;;;abi3;/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12;/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12;/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages;/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages
+_Python3_INTERPRETER_SIGNATURE:INTERNAL=2549c9a45fc0b393727191f2dfe4c82c
+//NumPy reason failure
+_Python3_NumPy_REASON_FAILURE:INTERNAL=
 

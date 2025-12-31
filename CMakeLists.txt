@@ -1,9 +1,9 @@
-cmake_minimum_required(Version 3.13)
+cmake_minimum_required(VERSION 3.13)
 # this makes sure CMake is version 3.13+ to build this project
 # CMake is a build system generator -- it makes the build files (like makefiles) needed to compile a project
 # Build files are teh instructions that tell your compiler how to turn source code into binary -> for ARM this is teh final .uf2 files
 
-include($ENV(PICO_SDK_PATH)/external/pico_sdk_import.cmake)
+include($ENV{PICO_SDK_PATH}/external/pico_sdk_import.cmake)
 # this imports the pico SDK build system by pulling the SDK's CMake Configuration from PICO_SDK_PATH
 # PICO_SDK_PATH is a variable you set up when you instal the pico sdk
 # this imports all of the SDK libaries that sets up ARM compilation 
@@ -33,7 +33,7 @@ add_executable(mac-gaming
     )
 # this tells CMake to compile these C files, the binary will be in mac-gaming.uf2
 
-target_include_directores(mac-gaming PRIVATE
+target_include_directories(mac-gaming PRIVATE
     ${CMAKE_CURRENT_LIST_DIR}/include
 )
 # this tells CMake where to find the header files 
@@ -64,3 +64,6 @@ pico_add_extra_outputs(mac-gaming)
 # .uf2 is the drag-and-drop bootloader for pi picos
 # normally a .elf is produced, which is the compiler's raw ouptut containing arm code, debug symbols, and memory section mappings
 # running this allows the .elf to be transformed into something the pico's bootlaoder can understand
+
+
+
