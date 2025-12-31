@@ -7,7 +7,7 @@
 
 #include <stdbool.h> // this imports the bool type and allows for true/false keywords
 
-void matrix_int(void); // this initializes the matrix
+void matrix_init(void); // this initializes the matrix
 
 uint16_t matrix_scan(void); // this scans the matrix and returns a bitmask of which key is pressed
 // a bitmask is just a 16 bit integer whose position with a 1 is the key pressed

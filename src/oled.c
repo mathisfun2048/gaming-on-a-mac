@@ -13,52 +13,51 @@
 // so i'm going to hardcode these values as pixels because eh
 // i'll have the dimensions be 5x7: 5 pixels wide, 7 pixels tall
 
-satic const uint8_t font5x7[][5]{
-    {0x00, 0x00, 0x00, 0x00, 0x00} // " " 0x20 0
-    {0x3F, 0x40, 0x38, 0x40, 0x3F} //  W  0x57 1
-    {0x7E, 0x11, 0x11, 0x11, 0x7E} //  A  0x41 2
-    {0x46, 0x49, 0x49, 0x49, 0x31} //  S  0x53 3
-    {0x7F, 0x41, 0x41, 0x22, 0x1C} //  D  0x44 4
-    {0x3F, 0x40, 0x40, 0x40, 0x3F} //  U  0x55 5
-    {0x7F, 0x40, 0x40, 0x40, 0x40} //  L  0x4C 6
-    {0x7F, 0x09, 0x19, 0x29, 0x46} //  R  0x52 7
-    {0x7F, 0x08, 0x08, 0x08, 0x7F} //  H  0x48 8
-    {0x7F, 0x09, 0x09, 0x09, 0x06} //  P  0x50 9
-    {0x7F, 0x49, 0x49, 0x49, 0x41} //  E  0x45 10
-    {0x01, 0x01, 0x7F, 0x01, 0x01} //  T  0x54 11
-    {0x3E, 0x41, 0x41, 0x41, 0x3E} //  O  0x4F 12
-    {0x7F, 0x02, 0x0C, 0x02, 0x7F} //  M  0x4D 13
-
-}
+static const uint8_t font5x7[][5] = {
+    {0x00, 0x00, 0x00, 0x00, 0x00}, // " " 0x20 0
+    {0x3F, 0x40, 0x38, 0x40, 0x3F}, //  W  0x57 1
+    {0x7E, 0x11, 0x11, 0x11, 0x7E}, //  A  0x41 2
+    {0x46, 0x49, 0x49, 0x49, 0x31}, //  S  0x53 3
+    {0x7F, 0x41, 0x41, 0x22, 0x1C}, //  D  0x44 4
+    {0x3F, 0x40, 0x40, 0x40, 0x3F}, //  U  0x55 5
+    {0x7F, 0x40, 0x40, 0x40, 0x40}, //  L  0x4C 6
+    {0x7F, 0x09, 0x19, 0x29, 0x46}, //  R  0x52 7
+    {0x7F, 0x08, 0x08, 0x08, 0x7F}, //  H  0x48 8
+    {0x7F, 0x09, 0x09, 0x09, 0x06}, //  P  0x50 9
+    {0x7F, 0x49, 0x49, 0x49, 0x41}, //  E  0x45 10
+    {0x01, 0x01, 0x7F, 0x01, 0x01}, //  T  0x54 11
+    {0x3E, 0x41, 0x41, 0x41, 0x3E}, //  O  0x4F 12
+    {0x7F, 0x02, 0x0C, 0x02, 0x7F}  //  M  0x4D 13
+};
 
 static uint8_t ascii_to_font(uint8_t a) {
     if(a == 0x20) {
         return 0;
-    } elif (a == 0x57) {
+    } else if (a == 0x57) {
         return 1;
-    } elif (a == 0x41) {
+    } else if (a == 0x41) {
         return 2;
-    } elif (a == 0x53) {
+    } else if (a == 0x53) {
         return 3;
-    } elif (a == 0x44) {
+    } else if (a == 0x44) {
         return 4;
-    } elif (a == 0x55) {
+    } else if (a == 0x55) {
         return 5;
-    } elif (a == 0x4C) {
+    } else if (a == 0x4C) {
         return 6;
-    } elif (a == 0x52) {
+    } else if (a == 0x52) {
         return 7;
-    } elif (a == 0x48) {
+    } else if (a == 0x48) {
         return 8;
-    } elif (a == 0x50) {
+    } else if (a == 0x50) {
         return 9;
-    } elif (a == 0x45) {
+    } else if (a == 0x45) {
         return 10;
-    } elif (a == 0x54) {
-        return 11
-    } elif (a == 0x4F) {
+    } else if (a == 0x54) {
+        return 11;
+    } else if (a == 0x4F) {
         return 12;
-    } elif (a == 0x4D) {
+    } else if (a == 0x4D) {
         return 13;
     } else {
         return 0; // returns space if char isn't defined
@@ -213,7 +212,7 @@ M:
 
 */
 
-static uint8_t display_buffer[OLED_HEIGHT / 8][OLED_WIDTH] 
+static uint8_t display_buffer[OLED_HEIGHT / 8][OLED_WIDTH];
 // this speeds up display updates by chunking up the display
 // I want the display to look like this:
 // <LAYER NAME>
@@ -226,11 +225,11 @@ static uint8_t display_buffer[OLED_HEIGHT / 8][OLED_WIDTH]
 static void i2c_start(void) {
     gpio_set_dir(OLED_SDA_PIN, GPIO_OUT); // sets teh gpio pin to be an output pin
     gpio_put(OLED_SDA_PIN, 1); // enables the sda pin
-    gpio_put(OLED_SCL_PIN, 1) // enables the scl pin
-    sleep_us(1); // mild delay to make sure that both pins are high 
+    gpio_put(OLED_SCL_PIN, 1); // enables the scl pin
+    sleep_us(1); // mild delay to make sure that both pins are high
     gpio_put(OLED_SDA_PIN,0); // SDA being low while SCL is high is the start condition for I2C
     sleep_us(1); // mild delay to make sure I2C has the opportunity to start
-    gpio_put(OLED_SCL_PIN, 0) // SCL can now be ready for data, so now its low
+    gpio_put(OLED_SCL_PIN, 0); // SCL can now be ready for data, so now its low
     sleep_us(1); // mild setup time
 }
 
@@ -290,7 +289,7 @@ static bool i2c_write_byte(uint8_t byte) {
     gpio_set_dir(OLED_SDA_PIN, GPIO_IN);
     gpio_put(OLED_SCL_PIN, 1);
     sleep_us(1);
-    bool ack = !glio_get(OLED_SDA_PIN); // if ack sent, then SDA will read low, so we need the opposite of that
+    bool ack = !gpio_get(OLED_SDA_PIN); // if ack sent, then SDA will read low, so we need the opposite of that
     gpio_put(OLED_SCL_PIN, 0);
     sleep_us(1);
     // this above algorihtm checks if an ack message is sent
@@ -300,7 +299,7 @@ static bool i2c_write_byte(uint8_t byte) {
 
 static void oled_command(uint8_t cmd) {
     i2c_start();
-    i2c_write_byte(OLED_ADDRESS << 1) // shifting left by one creates a 0 in the 0 bit index -> this means write mode (master -> slave); if this were a 1 instead, then it would be read mode (slave -> master)
+    i2c_write_byte(OLED_ADDRESS << 1); // shifting left by one creates a 0 in the 0 bit index -> this means write mode (master -> slave); if this were a 1 instead, then it would be read mode (slave -> master)
     i2c_write_byte(0x00); // this means expect a command
     i2c_write_byte(cmd); // writes teh command
     i2c_stop();
@@ -308,7 +307,7 @@ static void oled_command(uint8_t cmd) {
 
 static void oled_data(uint8_t data) {
     i2c_start();
-    i2c_write_byte[OLED_ADDRESS << 1]
+    i2c_write_byte(OLED_ADDRESS << 1);
     i2c_write_byte(0x40); // this means expect some data
     i2c_write_byte(data);
     i2c_stop();
@@ -376,7 +375,7 @@ void oled_text(uint8_t x, uint8_t y, const char* str) {
 
                 display_buffer[y][x+i] = font5x7[ascii_to_font(c)][i];
             }
-            x += 6 // advances cursor 5 pixels for charachter + 1 pixel for spacing
+            x += 6; // advances cursor 5 pixels for charachter + 1 pixel for spacing
         }
         str++; // moves pointer to the next charachter
     }
@@ -389,7 +388,7 @@ void oled_update(void) {
         oled_command(0x10); // set col adress upper 4 bits to 0
         // these above control which col index we start at
 
-        for(uint8_t col; col < oled_width; col++) { // we itterate through all 128 cols
+        for(uint8_t col = 0; col < OLED_WIDTH; col++) { // we itterate through all 128 cols
             oled_data(display_buffer[page][col]); // sends one byte to oled, increments
         }
     }
@@ -407,9 +406,9 @@ void oled_draw_grid(const char* keys[9], const char* title) { // the keys array 
         uint8_t col = i % 3; // algorithm for claculating which col each key is in
 
         uint8_t x = col * cell_w + 2;
-        uint8_t y = row + 1; // start at page 1 
+        uint8_t y = row + 1; // start at page 1
 
-        oled_text(x, y, keys[i])
+        oled_text(x, y, keys[i]);
     }
 
     oled_update(); // updates oled after RAM is set

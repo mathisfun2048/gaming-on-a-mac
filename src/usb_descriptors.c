@@ -1,18 +1,20 @@
 #include "config.h"
 #include "usb_hid.h"
+#include "tusb.h"
+#include <string.h>
 
 #define USB_VID 0x2E8A // vendor assigned to rpi by usb-if
 #define USB_PID 0x1001 // rando number you get to pick
 #define USB_BCD 0x200 // this menas usb 2.0
 
-uint8_t const desc_hid_report[] {
-    TUD_HID_REPRT_DESC_KEYBOARD(HID_REPORT_ID(1)),
+uint8_t const desc_hid_report[] = {
+    TUD_HID_REPORT_DESC_KEYBOARD(HID_REPORT_ID(1)),
     TUD_HID_REPORT_DESC_CONSUMER(HID_REPORT_ID(2))
 };
 // array contianing teh hid reports
 
 tusb_desc_device_t const desc_device = {
-    .blegth = sizeof(tusb_desc_device_t), // descriptor size 
+    .bLength = sizeof(tusb_desc_device_t), // descriptor size
     .bDescriptorType = TUSB_DESC_DEVICE, // type identiifer
     .bcdUSB = USB_BCD, // usb spec
     .bDeviceClass = 0x00, // class code
@@ -25,7 +27,7 @@ tusb_desc_device_t const desc_device = {
     .iManufacturer = 0x01, //  index for manufacturer name
     .iProduct = 0x02, // index for product name
     .iSerialNumber = 0x03, // index foer serial number
-    .bNumConfigerations = 0x01 // number of configurations = 1
+    .bNumConfigurations = 0x01 // number of configurations = 1
 }; // this is read during enumeration 
 
 uint8_t const * tud_descriptor_device_cb(void) {

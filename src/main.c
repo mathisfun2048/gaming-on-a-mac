@@ -35,7 +35,7 @@ we map from physical to logical in this array
 */
 static const uint8_t key_rotation[9] = {
     6, 3, 0, 7, 4, 1, 8, 5, 2
-}
+};
 
 static const struct {
     uint8_t keycode;
@@ -46,11 +46,11 @@ static const struct {
     {HID_KEY_TAB, 0}, 
     {HID_KEY_A, 0},
     {HID_KEY_S, 0}, 
-    {HID_KEY_D, 0}, 
-    {HID_KEY_LSHIFT, 0}, 
-    {0,0} // toggle
+    {HID_KEY_D, 0},
+    {HID_KEY_LSHIFT, 0},
+    {0,0}, // toggle
     {HID_KEY_SPACE, 0}
-}
+};
 // lookup table for wasd whose logical index returns a keycode and modifer
 
 static const struct {
@@ -63,10 +63,10 @@ static const struct {
     {HID_KEY_LEFT_ARROW, 0}, 
     {HID_KEY_DOWN_ARROW, 0}, 
     {HID_KEY_RIGHT_ARROW, 0}, 
-    {HID_KEY_LSHIFT, 0}, 
-    {0,0}, 
+    {HID_KEY_LSHIFT, 0},
+    {0,0},
     {HID_KEY_SPACE, 0}
-}
+};
 // lookup table for arrow layer
 
 static const char* wasd_lables[9] = {
@@ -76,18 +76,18 @@ static const char* wasd_lables[9] = {
 };
 // visual represntation on how things should look for teh wasd table
 
-static const char* arrows_lables[9] {
+static const char* arrows_lables[9] = {
     "E", "U", "T",
     "L", "D", "R",
     "SH", "", "SP"
-}
+};
 // same thing but now for arrows
 
 void update_display(void) {
     if(current_layer == LAYER_WASD) {
         oled_draw_grid(wasd_lables, "WASD MODE");
     } else {
-        oled_draw_grid(arrow_lables, "ARROW MODE")
+        oled_draw_grid(arrows_lables, "ARROW MODE");
     }
 }
 // draws the oled!
@@ -99,7 +99,7 @@ void handle_key_press(uint8_t key_index) {
         return;
     }
 
-    if(current_layer = LAYER_WASD) {
+    if(current_layer == LAYER_WASD) {
         usb_hid_send_key(layer_wasd[key_index].keycode, layer_wasd[key_index].modifiers);
     } else {
         usb_hid_send_key(layer_arrows[key_index].keycode, layer_arrows[key_index].modifiers);
@@ -142,7 +142,7 @@ int main() {
 
         uint16_t matrix_state = matrix_scan(); // scans matrix
 
-        for(uint8_t i = 0; i <= 9; i++) {
+        for(uint8_t i = 0; i < 9; i++) {
             if(matrix_key_pressed(i)) {
                 uint8_t logical_key = key_rotation[i]; // applies rotation taht we established earlier
                 handle_key_press(logical_key);
@@ -161,3 +161,4 @@ int main() {
 
     return 0;
 }
+

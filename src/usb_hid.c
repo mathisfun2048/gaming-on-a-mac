@@ -10,7 +10,7 @@ void usb_hid_init(void) {
 void usb_hid_send_key(uint8_t keycode, uint8_t modifers) { // the keycode is as expected, but the modifier is a shift bitmask
     if(!tud_hid_ready()) return; // if HID endpoint istn busy, exit
 
-    uint_t report[8] = {0}; // creates an 8 byte keyboard input
+    uint8_t report[8] = {0}; // creates an 8 byte keyboard input
     report[0] = modifers; // first byte is the modifier bitmap
     report[2] = keycode; // we don't put keycode in slot 1 bc that is reserved by HID specifications
 
@@ -30,18 +30,18 @@ void usb_hid_send_key(uint8_t keycode, uint8_t modifers) { // the keycode is as 
     ((and if it does, we should prob not do anything))
     */
 
-    tud_hid_keyboard_report(1, modifiers, &report[2]); // sends input with tinyusb: first one is the report ID, modifiers, and pointer to the 6-keycode array
+    tud_hid_keyboard_report(1, modifers, &report[2]); // sends input with tinyusb: first one is the report ID, modifiers, and pointer to the 6-keycode array
     sleep_ms(10); // waits for that report to be sent
 }
 
 void usb_hid_send_consumer(uint16_t code) {
     if(!tud_hid_ready()) return; // same thing as above, if its not ready, exit
 
-    tud_hid_report(2, &code, sizeof(code)); .// npw sends reprot using second interface, &code is teh pointer to teh media keycode, the last is teh size of teh data
+    tud_hid_report(2, &code, sizeof(code)); // npw sends reprot using second interface, &code is teh pointer to teh media keycode, the last is teh size of teh data
     sleep_ms(10); // waits for that report to be sent
 
     uint16_t zero = 0;
-    tud(hid)report(2, &zero, size_of(zero)); // releases that key
+    tud_hid_report(2, &zero, sizeof(zero)); // releases that key
 }
 
 void usb_hid_release_all(void) {

@@ -15,7 +15,7 @@ project(mac-gaming C CXX ASM)
 # these are cross-copilers because the code runs on the pc but produces binary code for ARM
 # eabi stands for embedded application binary interface
 
-set(CMAKE_C_Standard 11)
+set(CMAKE_C_STANDARD 11)
 set(CMAKE_CXX_STANDARD 17)
 # These set the "version" of c and c++
 
@@ -50,7 +50,7 @@ pico_enable_stdio_uart(mac-gaming 0)
 target_link_libraries(mac-gaming
     pico_stdlib
     hardware_gpio
-    hardware-irq
+    hardware_irq
     tinyusb_device
 )
 # this links these libraries from the pico sdk to the executable file that cmake compiles

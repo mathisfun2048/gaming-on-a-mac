@@ -22,13 +22,13 @@ static uint32_t debounce_time[NUM_ROWS * NUM_COLS] = {0};
 
 void matrix_init(void) {
     for(int i = 0; i < NUM_COLS; i++) {
-        gpio_init(col_pins[i]) // initializes the gpio pins of cols
+        gpio_init(col_pins[i]); // initializes the gpio pins of cols
         gpio_set_dir(col_pins[i], GPIO_OUT); // this sets these pins as output pins, meaning the MCU controls the voltage
         gpio_put(col_pins[i], 0); // this sets drive to low initially
     }
 
     for (int i = 0; i < NUM_ROWS; i++) {
-        gpio_init(row_pins[i]) // initializes gpio pins of rows
+        gpio_init(row_pins[i]); // initializes gpio pins of rows
         gpio_set_dir(row_pins[i], GPIO_IN); // this sets as pins as input pins, meaning the MCU detects the voltage relitve to ground
         gpio_pull_down(row_pins[i]); // this enables the pull down resistor
         // pull down resistors are a weak connection to ground
@@ -48,7 +48,7 @@ uint16_t matrix_scan(void) {
         sleep_us(10); // small delay for teh voltage to stabilize to high
 
         for(int j = 0; j < NUM_ROWS; j++) {
-            uint8_t key_index = j * NUM_COLS + col; // simple algorithm to get the index of each 
+            uint8_t key_index = j * NUM_COLS + i; // simple algorithm to get the index of each 
             bool pressed = gpio_get(row_pins[j]); // this finds out if a specific key is pressed. if gpio_get finds a high voltage, we get true!
 
             if(now - debounce_time[key_index] > DEBOUNCE_MS) { // checks time between presses to prevent double presses
@@ -73,7 +73,7 @@ uint16_t matrix_scan(void) {
                 }
             } else {
                 if((current_state >> key_index) & 1 /* tests if the current state is the key index*/) {
-                    new state |= (1 << key_index); // this is the else case so the 5ms has not elapsed so we just set it to the current state
+                    new_state |= (1 << key_index); // this is the else case so the 5ms has not elapsed so we just set it to the current state
                 }
             }
 
@@ -86,6 +86,7 @@ uint16_t matrix_scan(void) {
 
         }
 
+        gpio_put(col_pins[i], 0); // set col pin back to low
     }
     current_state = new_state; // sets the new current state to the new state
     return current_state;
@@ -111,6 +112,6 @@ bool matrix_key_released(uint8_t key_index) {
     uint16_t changed = current_state ^ previous_state;
     // same logic as above, when a key changes the change is recorded
 
-    return (changed & (1 << key_index)) && !(current_state & (1 << key_index))
+    return (changed & (1 << key_index)) && !(current_state & (1 << key_index));
     // returns true f the change is the key index, but is not hte current state, implying the key is released
 }

@@ -27,3 +27,6 @@ CMake Error at CMakeLists.txt:22 (pico_sdk_init):
 # Error 2:
 
 spell directories correctly.....
+
+# Error 3:
+u2f not generating... why?

@@ -24,8 +24,8 @@
 
 void usb_hid_init(void); // initializes USB HID
 
-void usb_hid_send_key(uint8_t keycode, uint8_t modifers); // sends key 
-void usb_hid_send_consumer(uint16_t code) // send consumer driver code
+void usb_hid_send_key(uint8_t keycode, uint8_t modifers); // sends key
+void usb_hid_send_consumer(uint16_t code); // send consumer driver code
 void usb_hid_release_all(void); // release all keys
 
 // there are more functions in usb_hid.c, but thsoe are for tinyusb, so we don't need to include them here
