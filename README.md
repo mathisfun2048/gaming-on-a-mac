@@ -6,10 +6,10 @@
  - Button layout displayed on oled
  - Layers can be switched with the encoder or the bottom middle button
 
- ## How can I make it?
+## How can I make it?
  Read hardware_instructions.md! It walks through how many of what to buy, how to order the PCB, and how to assemble it together. 
 
- ## Demo
+## Demo
 Here's a youtube link:
 
 https://youtube.com/shorts/ai6QLhHT9NE?si=4pOMcnLnvPT2tYLt
