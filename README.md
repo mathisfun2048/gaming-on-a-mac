@@ -27,3 +27,6 @@ PCB Schematic:
 In action:
 <img width="500" height="850" alt="snakey snake" src="https://github.com/user-attachments/assets/dd9f9f6a-b422-4aa5-b785-acfd872871a0" />
 
+## Where is the firmware I can flash!
+It's in 2 places: you can either find the .uf2 file in the build directory, or, you can download the latest release on github!
+
