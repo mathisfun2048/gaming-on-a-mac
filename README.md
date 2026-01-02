@@ -7,7 +7,7 @@
  - Layers can be switched with the encoder or the bottom middle button
 
 ## How can I make it?
- Read hardware_instructions.md! It walks through how many of what to buy, how to order the PCB, and how to assemble it together. 
+Read hardware_instructions.md! It walks through how many of what to buy, how to order the PCB, and how to assemble it together. 
 
 ## Demo
 Here's a youtube link:
