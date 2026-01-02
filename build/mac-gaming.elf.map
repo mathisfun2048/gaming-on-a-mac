@@ -2729,7 +2729,7 @@ LOAD /Applications/ARM/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-
                 0x10000100                        __boot2_end__ = .
                 0x00000001                        ASSERT (((__boot2_end__ - __boot2_start__) == 0x100), ERROR: Pico second stage bootloader must be 256 bytes in size)
 
-.text           0x10000100     0x4b48
+.text           0x10000100     0x4be0
                 0x10000100                        __logical_binary_start = .
  *(.vectors)
  .vectors       0x10000100       0xd4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o
@@ -2824,450 +2824,450 @@ LOAD /Applications/ARM/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-
  .text.i2c_write_byte.isra.0
                 0x10000714       0x80 CMakeFiles/mac-gaming.dir/src/oled.c.o
  .text.oled_init
-                0x10000794      0x710 CMakeFiles/mac-gaming.dir/src/oled.c.o
+                0x10000794      0x7a8 CMakeFiles/mac-gaming.dir/src/oled.c.o
                 0x10000794                oled_init
  .text.oled_update
-                0x10000ea4      0x190 CMakeFiles/mac-gaming.dir/src/oled.c.o
-                0x10000ea4                oled_update
+                0x10000f3c      0x190 CMakeFiles/mac-gaming.dir/src/oled.c.o
+                0x10000f3c                oled_update
  .text.oled_draw_grid
-                0x10001034      0x184 CMakeFiles/mac-gaming.dir/src/oled.c.o
-                0x10001034                oled_draw_grid
+                0x100010cc      0x184 CMakeFiles/mac-gaming.dir/src/oled.c.o
+                0x100010cc                oled_draw_grid
  .text.usb_hid_init
-                0x100011b8        0xc CMakeFiles/mac-gaming.dir/src/usb_hid.c.o
-                0x100011b8                usb_hid_init
+                0x10001250        0xc CMakeFiles/mac-gaming.dir/src/usb_hid.c.o
+                0x10001250                usb_hid_init
  .text.usb_hid_send_key
-                0x100011c4       0x38 CMakeFiles/mac-gaming.dir/src/usb_hid.c.o
-                0x100011c4                usb_hid_send_key
+                0x1000125c       0x38 CMakeFiles/mac-gaming.dir/src/usb_hid.c.o
+                0x1000125c                usb_hid_send_key
  .text.usb_hid_release_all
-                0x100011fc       0x2c CMakeFiles/mac-gaming.dir/src/usb_hid.c.o
-                0x100011fc                usb_hid_release_all
+                0x10001294       0x2c CMakeFiles/mac-gaming.dir/src/usb_hid.c.o
+                0x10001294                usb_hid_release_all
  .text.tud_hid_descriptor_report_cb
-                0x10001228        0x8 CMakeFiles/mac-gaming.dir/src/usb_hid.c.o
-                0x10001228                tud_hid_descriptor_report_cb
+                0x100012c0        0x8 CMakeFiles/mac-gaming.dir/src/usb_hid.c.o
+                0x100012c0                tud_hid_descriptor_report_cb
  .text.tud_hid_get_report_cb
-                0x10001230        0x4 CMakeFiles/mac-gaming.dir/src/usb_hid.c.o
-                0x10001230                tud_hid_get_report_cb
+                0x100012c8        0x4 CMakeFiles/mac-gaming.dir/src/usb_hid.c.o
+                0x100012c8                tud_hid_get_report_cb
  .text.tud_hid_set_report_cb
-                0x10001234        0x4 CMakeFiles/mac-gaming.dir/src/usb_hid.c.o
-                0x10001234                tud_hid_set_report_cb
+                0x100012cc        0x4 CMakeFiles/mac-gaming.dir/src/usb_hid.c.o
+                0x100012cc                tud_hid_set_report_cb
  .text.tud_descriptor_device_cb
-                0x10001238        0x8 CMakeFiles/mac-gaming.dir/src/usb_descriptors.c.o
-                0x10001238                tud_descriptor_device_cb
+                0x100012d0        0x8 CMakeFiles/mac-gaming.dir/src/usb_descriptors.c.o
+                0x100012d0                tud_descriptor_device_cb
  .text.tud_descriptor_configuration_cb
-                0x10001240        0x8 CMakeFiles/mac-gaming.dir/src/usb_descriptors.c.o
-                0x10001240                tud_descriptor_configuration_cb
+                0x100012d8        0x8 CMakeFiles/mac-gaming.dir/src/usb_descriptors.c.o
+                0x100012d8                tud_descriptor_configuration_cb
  .text.tud_descriptor_string_cb
-                0x10001248       0x70 CMakeFiles/mac-gaming.dir/src/usb_descriptors.c.o
-                0x10001248                tud_descriptor_string_cb
+                0x100012e0       0x70 CMakeFiles/mac-gaming.dir/src/usb_descriptors.c.o
+                0x100012e0                tud_descriptor_string_cb
  .text.gpio_default_irq_handler
-                0x100012b8      0x274 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o
+                0x10001350      0x274 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o
  .text.gpio_set_pulls
-                0x1000152c       0x28 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o
-                0x1000152c                gpio_set_pulls
+                0x100015c4       0x28 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o
+                0x100015c4                gpio_set_pulls
  .text.gpio_set_irq_enabled
-                0x10001554       0x58 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o
-                0x10001554                gpio_set_irq_enabled
+                0x100015ec       0x58 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o
+                0x100015ec                gpio_set_irq_enabled
  .text.gpio_set_irq_enabled_with_callback
-                0x100015ac       0xd0 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o
-                0x100015ac                gpio_set_irq_enabled_with_callback
+                0x10001644       0xd0 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o
+                0x10001644                gpio_set_irq_enabled_with_callback
  .text.gpio_init
-                0x1000167c       0x40 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o
-                0x1000167c                gpio_init
+                0x10001714       0x40 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o
+                0x10001714                gpio_init
  .text.rp2040_chip_version
-                0x100016bc        0xc CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2040/pico_platform/platform.c.o
-                0x100016bc                rp2040_chip_version
- .text.panic    0x100016c8       0x30 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o
-                0x100016c8                panic
+                0x10001754        0xc CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2040/pico_platform/platform.c.o
+                0x10001754                rp2040_chip_version
+ .text.panic    0x10001760       0x30 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o
+                0x10001760                panic
  .text.hw_claim_or_assert
-                0x100016f8       0x44 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/common/hardware_claim/claim.c.o
-                0x100016f8                hw_claim_or_assert
+                0x10001790       0x44 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/common/hardware_claim/claim.c.o
+                0x10001790                hw_claim_or_assert
  .text.hw_claim_unused_from_range
-                0x1000173c       0x9c CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/common/hardware_claim/claim.c.o
-                0x1000173c                hw_claim_unused_from_range
+                0x100017d4       0x9c CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/common/hardware_claim/claim.c.o
+                0x100017d4                hw_claim_unused_from_range
  .text.next_striped_spin_lock_num
-                0x100017d8       0x18 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_sync/sync.c.o
-                0x100017d8                next_striped_spin_lock_num
+                0x10001870       0x18 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_sync/sync.c.o
+                0x10001870                next_striped_spin_lock_num
  .text.spin_lock_claim_unused
-                0x100017f0       0x24 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_sync/sync.c.o
-                0x100017f0                spin_lock_claim_unused
+                0x10001888       0x24 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_sync/sync.c.o
+                0x10001888                spin_lock_claim_unused
  .text.spin_locks_reset
-                0x10001814       0x1c CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
-                0x10001814                spin_locks_reset
+                0x100018ac       0x1c CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
+                0x100018ac                spin_locks_reset
  .text.runtime_init_per_core_irq_priorities
-                0x10001830       0x24 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_irq/irq.c.o
-                0x10001830                runtime_init_per_core_irq_priorities
+                0x100018c8       0x24 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_irq/irq.c.o
+                0x100018c8                runtime_init_per_core_irq_priorities
  .text.irq_set_enabled
-                0x10001854       0x24 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_irq/irq.c.o
-                0x10001854                irq_set_enabled
+                0x100018ec       0x24 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_irq/irq.c.o
+                0x100018ec                irq_set_enabled
  .text.irq_set_exclusive_handler
-                0x10001878       0x54 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_irq/irq.c.o
-                0x10001878                irq_set_exclusive_handler
+                0x10001910       0x54 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_irq/irq.c.o
+                0x10001910                irq_set_exclusive_handler
  .text.irq_add_shared_handler
-                0x100018cc      0x1f4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_irq/irq.c.o
-                0x100018cc                irq_add_shared_handler
+                0x10001964      0x1f4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_irq/irq.c.o
+                0x10001964                irq_add_shared_handler
  .text.irq_remove_handler
-                0x10001ac0      0x1d4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_irq/irq.c.o
-                0x10001ac0                irq_remove_handler
+                0x10001b58      0x1d4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_irq/irq.c.o
+                0x10001b58                irq_remove_handler
  .text.irq_add_tail_to_free_list
-                0x10001c94       0xb4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_irq/irq.c.o
-                0x10001c94                irq_add_tail_to_free_list
+                0x10001d2c       0xb4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_irq/irq.c.o
+                0x10001d2c                irq_add_tail_to_free_list
  .text.lock_init
-                0x10001d48       0x10 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/common/pico_sync/lock_core.c.o
-                0x10001d48                lock_init
+                0x10001de0       0x10 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/common/pico_sync/lock_core.c.o
+                0x10001de0                lock_init
  .text.runtime_init_mutex
-                0x10001d58       0x50 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/common/pico_sync/mutex.c.o
-                0x10001d58                runtime_init_mutex
+                0x10001df0       0x50 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/common/pico_sync/mutex.c.o
+                0x10001df0                runtime_init_mutex
  .text.mutex_init
-                0x10001da8       0x1c CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/common/pico_sync/mutex.c.o
-                0x10001da8                mutex_init
+                0x10001e40       0x1c CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/common/pico_sync/mutex.c.o
+                0x10001e40                mutex_init
  .text.critical_section_init
-                0x10001dc4       0x1c CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/common/pico_sync/critical_section.c.o
-                0x10001dc4                critical_section_init
+                0x10001e5c       0x1c CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/common/pico_sync/critical_section.c.o
+                0x10001e5c                critical_section_init
  .text.sleep_until_callback
-                0x10001de0       0x30 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/common/pico_time/time.c.o
+                0x10001e78       0x30 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/common/pico_time/time.c.o
  .text.alarm_pool_irq_handler
-                0x10001e10      0x2fc CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/common/pico_time/time.c.o
+                0x10001ea8      0x2fc CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/common/pico_time/time.c.o
  .text.runtime_init_default_alarm_pool
-                0x1000210c       0xdc CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/common/pico_time/time.c.o
-                0x1000210c                runtime_init_default_alarm_pool
+                0x100021a4       0xdc CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/common/pico_time/time.c.o
+                0x100021a4                runtime_init_default_alarm_pool
  .text.alarm_pool_add_alarm_at_force_in_context
-                0x100021e8       0xb0 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/common/pico_time/time.c.o
-                0x100021e8                alarm_pool_add_alarm_at_force_in_context
+                0x10002280       0xb0 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/common/pico_time/time.c.o
+                0x10002280                alarm_pool_add_alarm_at_force_in_context
  .text.alarm_pool_cancel_alarm
-                0x10002298       0x74 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/common/pico_time/time.c.o
-                0x10002298                alarm_pool_cancel_alarm
+                0x10002330       0x74 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/common/pico_time/time.c.o
+                0x10002330                alarm_pool_cancel_alarm
  .text.sleep_until
-                0x1000230c       0xd8 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/common/pico_time/time.c.o
-                0x1000230c                sleep_until
+                0x100023a4       0xd8 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/common/pico_time/time.c.o
+                0x100023a4                sleep_until
  .text.sleep_us
-                0x100023e4       0x28 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/common/pico_time/time.c.o
-                0x100023e4                sleep_us
+                0x1000247c       0x28 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/common/pico_time/time.c.o
+                0x1000247c                sleep_us
  .text.sleep_ms
-                0x1000240c       0x38 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/common/pico_time/time.c.o
-                0x1000240c                sleep_ms
+                0x100024a4       0x38 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/common/pico_time/time.c.o
+                0x100024a4                sleep_ms
  .text.best_effort_wfe_or_timeout
-                0x10002444       0xf8 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/common/pico_time/time.c.o
-                0x10002444                best_effort_wfe_or_timeout
+                0x100024dc       0xf8 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/common/pico_time/time.c.o
+                0x100024dc                best_effort_wfe_or_timeout
  .text.timer_hardware_alarm_claim
-                0x1000253c       0x14 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_timer/timer.c.o
-                0x1000253c                timer_hardware_alarm_claim
+                0x100025d4       0x14 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_timer/timer.c.o
+                0x100025d4                timer_hardware_alarm_claim
  .text.timer_time_us_64
-                0x10002550       0x10 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_timer/timer.c.o
-                0x10002550                timer_time_us_64
+                0x100025e8       0x10 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_timer/timer.c.o
+                0x100025e8                timer_time_us_64
  .text.time_us_64
-                0x10002560       0x14 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_timer/timer.c.o
-                0x10002560                time_us_64
+                0x100025f8       0x14 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_timer/timer.c.o
+                0x100025f8                time_us_64
  .text.busy_wait_until
-                0x10002574       0x20 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_timer/timer.c.o
-                0x10002574                busy_wait_until
+                0x1000260c       0x20 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_timer/timer.c.o
+                0x1000260c                busy_wait_until
  .text.clock_configure_int_divider
-                0x10002594       0xf4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o
-                0x10002594                clock_configure_int_divider
+                0x1000262c       0xf4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o
+                0x1000262c                clock_configure_int_divider
  .text.clock_configure_undivided
-                0x10002688       0xe8 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o
-                0x10002688                clock_configure_undivided
+                0x10002720       0xe8 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o
+                0x10002720                clock_configure_undivided
  .text.clock_get_hz
-                0x10002770        0xc CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o
-                0x10002770                clock_get_hz
+                0x10002808        0xc CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o
+                0x10002808                clock_get_hz
  .text.pll_init
-                0x1000277c       0xa4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_pll/pll.c.o
-                0x1000277c                pll_init
+                0x10002814       0xa4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_pll/pll.c.o
+                0x10002814                pll_init
  .text.tick_start
-                0x10002820       0x10 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o
-                0x10002820                tick_start
+                0x100028b8       0x10 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o
+                0x100028b8                tick_start
  .text.rom_func_lookup
-                0x10002830       0x10 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o
-                0x10002830                rom_func_lookup
+                0x100028c8       0x10 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o
+                0x100028c8                rom_func_lookup
  .text.rom_data_lookup
-                0x10002840       0x10 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o
-                0x10002840                rom_data_lookup
+                0x100028d8       0x10 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o
+                0x100028d8                rom_data_lookup
  .text.rom_funcs_lookup
-                0x10002850       0x44 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o
-                0x10002850                rom_funcs_lookup
+                0x100028e8       0x44 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o
+                0x100028e8                rom_funcs_lookup
  .text.xosc_init
-                0x10002894       0x28 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o
-                0x10002894                xosc_init
+                0x1000292c       0x28 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o
+                0x1000292c                xosc_init
  .text.first_per_core_initializer
-                0x100028bc        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o
+                0x10002954        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o
  .text.hard_assertion_failure
-                0x100028c0        0xc CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o
-                0x100028c0                hard_assertion_failure
+                0x10002958        0xc CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o
+                0x10002958                hard_assertion_failure
  .text.runtime_run_initializers
-                0x100028cc       0x28 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o
-                0x100028cc                runtime_run_initializers
+                0x10002964       0x28 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o
+                0x10002964                runtime_run_initializers
  .text.runtime_init_early_resets
-                0x100028f4       0x2c CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
-                0x100028f4                runtime_init_early_resets
+                0x1000298c       0x2c CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
+                0x1000298c                runtime_init_early_resets
  .text.runtime_init_usb_power_down
-                0x10002920       0x1c CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
-                0x10002920                runtime_init_usb_power_down
+                0x100029b8       0x1c CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
+                0x100029b8                runtime_init_usb_power_down
  .text.runtime_init_post_clock_resets
-                0x1000293c       0x20 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
-                0x1000293c                runtime_init_post_clock_resets
+                0x100029d4       0x20 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
+                0x100029d4                runtime_init_post_clock_resets
  .text.runtime_init_rp2040_gpio_ie_disable
-                0x1000295c       0x14 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
-                0x1000295c                runtime_init_rp2040_gpio_ie_disable
+                0x100029f4       0x14 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
+                0x100029f4                runtime_init_rp2040_gpio_ie_disable
  .text.runtime_init_spin_locks_reset
-                0x10002970        0x8 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
-                0x10002970                runtime_init_spin_locks_reset
+                0x10002a08        0x8 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
+                0x10002a08                runtime_init_spin_locks_reset
  .text.runtime_init_install_ram_vector_table
-                0x10002978       0xb4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
-                0x10002978                runtime_init_install_ram_vector_table
+                0x10002a10       0xb4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
+                0x10002a10                runtime_init_install_ram_vector_table
  .text.runtime_init_clocks
-                0x10002a2c       0xd8 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
-                0x10002a2c                runtime_init_clocks
- .text          0x10002b04       0x10 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o
+                0x10002ac4       0xd8 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
+                0x10002ac4                runtime_init_clocks
+ .text          0x10002b9c       0x10 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o
  .text.__wrap___aeabi_idiv
-                0x10002b14       0x50 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o
-                0x10002b14                __wrap___aeabi_idivmod
-                0x10002b14                divmod_s32s32
-                0x10002b14                div_s32s32
-                0x10002b14                __wrap___aeabi_idiv
-                0x10002b1c                divmod_s32s32_unsafe
-                0x10002b48                divmod_s32s32_savestate
+                0x10002bac       0x50 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o
+                0x10002bac                __wrap___aeabi_idivmod
+                0x10002bac                divmod_s32s32
+                0x10002bac                div_s32s32
+                0x10002bac                __wrap___aeabi_idiv
+                0x10002bb4                divmod_s32s32_unsafe
+                0x10002be0                divmod_s32s32_savestate
  .text.__wrap___aeabi_uidiv
-                0x10002b64       0x4c CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o
-                0x10002b64                __wrap___aeabi_uidiv
-                0x10002b64                __wrap___aeabi_uidivmod
-                0x10002b64                div_u32u32
-                0x10002b64                divmod_u32u32
-                0x10002b6c                divmod_u32u32_unsafe
-                0x10002b94                divmod_u32u32_savestate
+                0x10002bfc       0x4c CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o
+                0x10002bfc                __wrap___aeabi_uidiv
+                0x10002bfc                __wrap___aeabi_uidivmod
+                0x10002bfc                div_u32u32
+                0x10002bfc                divmod_u32u32
+                0x10002c04                divmod_u32u32_unsafe
+                0x10002c2c                divmod_u32u32_savestate
  .text.__wrap___aeabi_ldiv
-                0x10002bb0      0x424 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o
-                0x10002bb0                __wrap___aeabi_ldivmod
-                0x10002bb0                div_s64s64
-                0x10002bb0                divmod_s64s64
-                0x10002be0                divmod_u64u64
-                0x10002be0                div_u64u64
-                0x10002be0                __wrap___aeabi_uldivmod
-                0x10002bf0                divmod_u64u64_savestate
-                0x10002c10                divmod_s64s64_unsafe
-                0x10002c98                divmod_u64u64_unsafe
+                0x10002c48      0x424 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o
+                0x10002c48                __wrap___aeabi_ldivmod
+                0x10002c48                div_s64s64
+                0x10002c48                divmod_s64s64
+                0x10002c78                divmod_u64u64
+                0x10002c78                div_u64u64
+                0x10002c78                __wrap___aeabi_uldivmod
+                0x10002c88                divmod_u64u64_savestate
+                0x10002ca8                divmod_s64s64_unsafe
+                0x10002d30                divmod_u64u64_unsafe
  .text.__aeabi_double_init
-                0x10002fd4       0xa4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o
-                0x10002fd4                __aeabi_double_init
+                0x1000306c       0xa4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o
+                0x1000306c                __aeabi_double_init
  .text.double_table_shim_on_use_helper
-                0x10003078       0x2c CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o
-                0x10003078                double_table_shim_on_use_helper
+                0x10003110       0x2c CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o
+                0x10003110                double_table_shim_on_use_helper
  .text.__aeabi_lmul
-                0x100030a4       0x32 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o
-                0x100030a4                __wrap___aeabi_lmul
- *fill*         0x100030d6        0x2 
+                0x1000313c       0x32 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o
+                0x1000313c                __wrap___aeabi_lmul
+ *fill*         0x1000316e        0x2 
  .text.__aeabi_float_init
-                0x100030d8       0x64 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o
-                0x100030d8                __aeabi_float_init
+                0x10003170       0x64 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o
+                0x10003170                __aeabi_float_init
  .text.float_table_shim_on_use_helper
-                0x1000313c       0x2c CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o
-                0x1000313c                float_table_shim_on_use_helper
- .text          0x10003168       0x10 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o
-                0x10003168                __aeabi_mem_init
- .text.memset   0x10003178        0xc CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o
-                0x10003178                __wrap_memset
- .text.memcpy   0x10003184        0xc CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o
-                0x10003184                __wrap___aeabi_memcpy
-                0x10003184                __wrap_memcpy
+                0x100031d4       0x2c CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o
+                0x100031d4                float_table_shim_on_use_helper
+ .text          0x10003200       0x10 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o
+                0x10003200                __aeabi_mem_init
+ .text.memset   0x10003210        0xc CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o
+                0x10003210                __wrap_memset
+ .text.memcpy   0x1000321c        0xc CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o
+                0x1000321c                __wrap___aeabi_memcpy
+                0x1000321c                __wrap_memcpy
  .text._out_char
-                0x10003190       0x10 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_printf/printf.c.o
+                0x10003228       0x10 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_printf/printf.c.o
  .text.weak_raw_vprintf
-                0x100031a0       0x30 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_printf/printf.c.o
-                0x100031a0                weak_raw_vprintf
- .text._exit    0x100031d0        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o
-                0x100031d0                _exit
- .text.exit     0x100031d4        0x8 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o
-                0x100031d4                exit
+                0x10003238       0x30 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_printf/printf.c.o
+                0x10003238                weak_raw_vprintf
+ .text._exit    0x10003268        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o
+                0x10003268                _exit
+ .text.exit     0x1000326c        0x8 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o
+                0x1000326c                exit
  .text.runtime_init
-                0x100031dc       0x2c CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o
-                0x100031dc                runtime_init
+                0x10003274       0x2c CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o
+                0x10003274                runtime_init
  .text.stdio_out_chars_no_crlf
-                0x10003208       0x10 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o
+                0x100032a0       0x10 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o
  .text.stdio_out_chars_crlf
-                0x10003218       0x94 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o
+                0x100032b0       0x94 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o
  .text.stdio_put_string
-                0x100032ac      0x100 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o
-                0x100032ac                stdio_put_string
+                0x10003344      0x100 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o
+                0x10003344                stdio_put_string
  .text.stdio_init_all
-                0x100033ac        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o
-                0x100033ac                stdio_init_all
+                0x10003444        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o
+                0x10003444                stdio_init_all
  .text.__wrap_putchar
-                0x100033b0       0x98 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o
-                0x100033b0                stdio_putchar
-                0x100033b0                __wrap_putchar
+                0x10003448       0x98 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o
+                0x10003448                stdio_putchar
+                0x10003448                __wrap_putchar
  .text.__wrap_puts
-                0x10003448       0x3c CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o
-                0x10003448                __wrap_puts
-                0x10003448                stdio_puts
+                0x100034e0       0x3c CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o
+                0x100034e0                __wrap_puts
+                0x100034e0                stdio_puts
  .text.dcd_init
-                0x10003484       0x90 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
-                0x10003484                dcd_init
+                0x1000351c       0x90 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
+                0x1000351c                dcd_init
  .text.dcd_int_enable
-                0x10003514        0xc CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
-                0x10003514                dcd_int_enable
+                0x100035ac        0xc CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
+                0x100035ac                dcd_int_enable
  .text.dcd_set_address
-                0x10003520       0x14 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
-                0x10003520                dcd_set_address
+                0x100035b8       0x14 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
+                0x100035b8                dcd_set_address
  .text.dcd_sof_enable
-                0x10003534       0x1c CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
-                0x10003534                dcd_sof_enable
+                0x100035cc       0x1c CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
+                0x100035cc                dcd_sof_enable
  .text.dcd_edpt0_status_complete
-                0x10003550       0x1c CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
-                0x10003550                dcd_edpt0_status_complete
+                0x100035e8       0x1c CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
+                0x100035e8                dcd_edpt0_status_complete
  .text.dcd_edpt_open
-                0x1000356c      0x114 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
-                0x1000356c                dcd_edpt_open
+                0x10003604      0x114 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
+                0x10003604                dcd_edpt_open
  .text.dcd_edpt_close_all
-                0x10003680        0x8 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
-                0x10003680                dcd_edpt_close_all
+                0x10003718        0x8 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
+                0x10003718                dcd_edpt_close_all
  .text.dcd_edpt_xfer
-                0x10003688       0x24 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
-                0x10003688                dcd_edpt_xfer
+                0x10003720       0x24 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
+                0x10003720                dcd_edpt_xfer
  .text.dcd_edpt_stall
-                0x100036ac       0x34 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
-                0x100036ac                dcd_edpt_stall
+                0x10003744       0x34 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
+                0x10003744                dcd_edpt_stall
  .text.dcd_edpt_clear_stall
-                0x100036e0       0x30 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
-                0x100036e0                dcd_edpt_clear_stall
+                0x10003778       0x30 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
+                0x10003778                dcd_edpt_clear_stall
  .text.rp2040_usb_init
-                0x10003710       0x40 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o
-                0x10003710                rp2040_usb_init
+                0x100037a8       0x40 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o
+                0x100037a8                rp2040_usb_init
  .text.hw_endpoint_xfer_start
-                0x10003750       0x40 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o
-                0x10003750                hw_endpoint_xfer_start
+                0x100037e8       0x40 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o
+                0x100037e8                hw_endpoint_xfer_start
  .text.tud_vendor_control_xfer_cb
-                0x10003790        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/device/usbd.c.o
-                0x10003790                tud_vendor_control_xfer_cb
+                0x10003828        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/device/usbd.c.o
+                0x10003828                tud_vendor_control_xfer_cb
  .text.tud_event_hook_cb
-                0x10003794        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/device/usbd.c.o
-                0x10003794                tud_event_hook_cb
+                0x1000382c        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/device/usbd.c.o
+                0x1000382c                tud_event_hook_cb
  .text.tud_sof_cb
-                0x10003798        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/device/usbd.c.o
-                0x10003798                tud_sof_cb
+                0x10003830        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/device/usbd.c.o
+                0x10003830                tud_sof_cb
  .text.tud_descriptor_bos_cb
-                0x1000379c        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/device/usbd.c.o
-                0x1000379c                tud_descriptor_bos_cb
+                0x10003834        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/device/usbd.c.o
+                0x10003834                tud_descriptor_bos_cb
  .text.tud_descriptor_device_qualifier_cb
-                0x100037a0        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/device/usbd.c.o
-                0x100037a0                tud_descriptor_device_qualifier_cb
+                0x10003838        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/device/usbd.c.o
+                0x10003838                tud_descriptor_device_qualifier_cb
  .text.tud_descriptor_other_speed_configuration_cb
-                0x100037a4        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/device/usbd.c.o
-                0x100037a4                tud_descriptor_other_speed_configuration_cb
+                0x1000383c        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/device/usbd.c.o
+                0x1000383c                tud_descriptor_other_speed_configuration_cb
  .text.tud_mount_cb
-                0x100037a8        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/device/usbd.c.o
-                0x100037a8                tud_mount_cb
+                0x10003840        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/device/usbd.c.o
+                0x10003840                tud_mount_cb
  .text.tud_umount_cb
-                0x100037ac        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/device/usbd.c.o
-                0x100037ac                tud_umount_cb
+                0x10003844        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/device/usbd.c.o
+                0x10003844                tud_umount_cb
  .text.tud_suspend_cb
-                0x100037b0        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/device/usbd.c.o
-                0x100037b0                tud_suspend_cb
+                0x10003848        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/device/usbd.c.o
+                0x10003848                tud_suspend_cb
  .text.tud_resume_cb
-                0x100037b4        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/device/usbd.c.o
-                0x100037b4                tud_resume_cb
+                0x1000384c        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/device/usbd.c.o
+                0x1000384c                tud_resume_cb
  .text.tud_mounted
-                0x100037b8       0x10 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/device/usbd.c.o
-                0x100037b8                tud_mounted
+                0x10003850       0x10 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/device/usbd.c.o
+                0x10003850                tud_mounted
  .text.tud_suspended
-                0x100037c8       0x10 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/device/usbd.c.o
-                0x100037c8                tud_suspended
+                0x10003860       0x10 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/device/usbd.c.o
+                0x10003860                tud_suspended
  .text.tud_rhport_init
-                0x100037d8       0xf4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/device/usbd.c.o
-                0x100037d8                tud_rhport_init
+                0x10003870       0xf4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/device/usbd.c.o
+                0x10003870                tud_rhport_init
  .text.tud_task_ext
-                0x100038cc      0x7c0 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/device/usbd.c.o
-                0x100038cc                tud_task_ext
+                0x10003964      0x7c0 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/device/usbd.c.o
+                0x10003964                tud_task_ext
  .text.usbd_open_edpt_pair
-                0x1000408c       0x9c CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/device/usbd.c.o
-                0x1000408c                usbd_open_edpt_pair
+                0x10004124       0x9c CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/device/usbd.c.o
+                0x10004124                usbd_open_edpt_pair
  .text.usbd_edpt_claim
-                0x10004128       0x28 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/device/usbd.c.o
-                0x10004128                usbd_edpt_claim
+                0x100041c0       0x28 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/device/usbd.c.o
+                0x100041c0                usbd_edpt_claim
  .text.usbd_edpt_xfer
-                0x10004150       0x4c CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/device/usbd.c.o
-                0x10004150                usbd_edpt_xfer
+                0x100041e8       0x4c CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/device/usbd.c.o
+                0x100041e8                usbd_edpt_xfer
  .text.usbd_edpt_busy
-                0x1000419c       0x1c CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/device/usbd.c.o
-                0x1000419c                usbd_edpt_busy
+                0x10004234       0x1c CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/device/usbd.c.o
+                0x10004234                usbd_edpt_busy
  .text.tud_control_status
-                0x100041b8       0x2c CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o
-                0x100041b8                tud_control_status
+                0x10004250       0x2c CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o
+                0x10004250                tud_control_status
  .text.tud_control_xfer
-                0x100041e4       0xac CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o
-                0x100041e4                tud_control_xfer
+                0x1000427c       0xac CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o
+                0x1000427c                tud_control_xfer
  .text.usbd_control_reset
-                0x10004290       0x14 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o
-                0x10004290                usbd_control_reset
+                0x10004328       0x14 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o
+                0x10004328                usbd_control_reset
  .text.usbd_control_set_complete_callback
-                0x100042a4        0xc CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o
-                0x100042a4                usbd_control_set_complete_callback
+                0x1000433c        0xc CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o
+                0x1000433c                usbd_control_set_complete_callback
  .text.usbd_control_set_request
-                0x100042b0       0x1c CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o
-                0x100042b0                usbd_control_set_request
+                0x10004348       0x1c CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o
+                0x10004348                usbd_control_set_request
  .text.usbd_control_xfer_cb
-                0x100042cc       0xec CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o
-                0x100042cc                usbd_control_xfer_cb
+                0x10004364       0xec CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o
+                0x10004364                usbd_control_xfer_cb
  .text.tud_hid_set_protocol_cb
-                0x100043b8        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o
-                0x100043b8                tud_hid_set_protocol_cb
+                0x10004450        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o
+                0x10004450                tud_hid_set_protocol_cb
  .text.tud_hid_set_idle_cb
-                0x100043bc        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o
-                0x100043bc                tud_hid_set_idle_cb
+                0x10004454        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o
+                0x10004454                tud_hid_set_idle_cb
  .text.tud_hid_report_complete_cb
-                0x100043c0        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o
-                0x100043c0                tud_hid_report_complete_cb
+                0x10004458        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o
+                0x10004458                tud_hid_report_complete_cb
  .text.tud_hid_report_failed_cb
-                0x100043c4        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o
-                0x100043c4                tud_hid_report_failed_cb
+                0x1000445c        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o
+                0x1000445c                tud_hid_report_failed_cb
  .text.tud_hid_n_ready
-                0x100043c8       0x38 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o
-                0x100043c8                tud_hid_n_ready
+                0x10004460       0x38 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o
+                0x10004460                tud_hid_n_ready
  .text.tud_hid_n_keyboard_report
-                0x10004400       0xac CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o
-                0x10004400                tud_hid_n_keyboard_report
+                0x10004498       0xac CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o
+                0x10004498                tud_hid_n_keyboard_report
  .text.hidd_init
-                0x100044ac       0x14 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o
-                0x100044ac                hidd_init
+                0x10004544       0x14 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o
+                0x10004544                hidd_init
  .text.hidd_deinit
-                0x100044c0        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o
-                0x100044c0                hidd_deinit
+                0x10004558        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o
+                0x10004558                hidd_deinit
  .text.hidd_reset
-                0x100044c4       0x14 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o
-                0x100044c4                hidd_reset
+                0x1000455c       0x14 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o
+                0x1000455c                hidd_reset
  .text.hidd_open
-                0x100044d8       0xa8 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o
-                0x100044d8                hidd_open
+                0x10004570       0xa8 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o
+                0x10004570                hidd_open
  .text.hidd_control_xfer_cb
-                0x10004580      0x218 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o
-                0x10004580                hidd_control_xfer_cb
+                0x10004618      0x218 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o
+                0x10004618                hidd_control_xfer_cb
  .text.hidd_xfer_cb
-                0x10004798       0xa4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o
-                0x10004798                hidd_xfer_cb
+                0x10004830       0xa4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o
+                0x10004830                hidd_xfer_cb
  .text.tusb_rhport_init
-                0x1000483c       0x48 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/tusb.c.o
-                0x1000483c                tusb_rhport_init
+                0x100048d4       0x48 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/tusb.c.o
+                0x100048d4                tusb_rhport_init
  .text.tu_edpt_claim
-                0x10004884       0x50 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/tusb.c.o
-                0x10004884                tu_edpt_claim
+                0x1000491c       0x50 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/tusb.c.o
+                0x1000491c                tu_edpt_claim
  .text.tu_edpt_validate
-                0x100048d4       0x7c CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/tusb.c.o
-                0x100048d4                tu_edpt_validate
+                0x1000496c       0x7c CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/tusb.c.o
+                0x1000496c                tu_edpt_validate
  .text.tu_edpt_bind_driver
-                0x10004950       0x34 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/tusb.c.o
-                0x10004950                tu_edpt_bind_driver
+                0x100049e8       0x34 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/tusb.c.o
+                0x100049e8                tu_edpt_bind_driver
  .text.tu_fifo_read
-                0x10004984       0x9c CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o
-                0x10004984                tu_fifo_read
+                0x10004a1c       0x9c CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o
+                0x10004a1c                tu_fifo_read
  .text.tu_fifo_write
-                0x10004a20       0xa8 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o
-                0x10004a20                tu_fifo_write
+                0x10004ab8       0xa8 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o
+                0x10004ab8                tu_fifo_write
  .text.tu_fifo_clear
-                0x10004ac8       0x40 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o
-                0x10004ac8                tu_fifo_clear
- .text.strlen   0x10004b08       0x5c /Applications/ARM/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-strlen-stub.o)
-                0x10004b08                strlen
+                0x10004b60       0x40 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o
+                0x10004b60                tu_fifo_clear
+ .text.strlen   0x10004ba0       0x5c /Applications/ARM/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-strlen-stub.o)
+                0x10004ba0                strlen
  *(.fini)
- .fini          0x10004b64        0x4 /Applications/ARM/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/crti.o
-                0x10004b64                _fini
- .fini.__stub   0x10004b68       0xa0 linker stubs
+ .fini          0x10004bfc        0x4 /Applications/ARM/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/crti.o
+                0x10004bfc                _fini
+ .fini.__stub   0x10004c00       0xa0 linker stubs
  *crtbegin.o(.ctors)
  *crtbegin?.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o *crtend?.o) .ctors)
@@ -3278,198 +3278,198 @@ LOAD /Applications/ARM/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-
  *(EXCLUDE_FILE(*crtend.o *crtend?.o) .dtors)
  *(SORT_BY_NAME(.dtors.*))
  *(.dtors)
-                0x10004c08                        . = ALIGN (0x4)
-                0x10004c08                        PROVIDE (__preinit_array_start = .)
+                0x10004ca0                        . = ALIGN (0x4)
+                0x10004ca0                        PROVIDE (__preinit_array_start = .)
  *(SORT_BY_NAME(.preinit_array.*))
  .preinit_array.00100
-                0x10004c08        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
-                0x10004c08                __pre_init_runtime_init_early_resets
+                0x10004ca0        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
+                0x10004ca0                __pre_init_runtime_init_early_resets
  .preinit_array.00101
-                0x10004c0c        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
-                0x10004c0c                __pre_init_runtime_init_usb_power_down
+                0x10004ca4        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
+                0x10004ca4                __pre_init_runtime_init_usb_power_down
  .preinit_array.00275
-                0x10004c10        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o
+                0x10004ca8        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o
  .preinit_array.00300
-                0x10004c14        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o
+                0x10004cac        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o
  .preinit_array.00350
-                0x10004c18        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o
+                0x10004cb0        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o
  .preinit_array.00350
-                0x10004c1c        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o
+                0x10004cb4        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o
  .preinit_array.00500
-                0x10004c20        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
-                0x10004c20                __pre_init_runtime_init_clocks
+                0x10004cb8        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
+                0x10004cb8                __pre_init_runtime_init_clocks
  .preinit_array.00600
-                0x10004c24        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
-                0x10004c24                __pre_init_runtime_init_post_clock_resets
+                0x10004cbc        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
+                0x10004cbc                __pre_init_runtime_init_post_clock_resets
  .preinit_array.00700
-                0x10004c28        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
-                0x10004c28                __pre_init_runtime_init_rp2040_gpio_ie_disable
+                0x10004cc0        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
+                0x10004cc0                __pre_init_runtime_init_rp2040_gpio_ie_disable
  .preinit_array.01000
-                0x10004c2c        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
-                0x10004c2c                __pre_init_runtime_init_spin_locks_reset
+                0x10004cc4        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
+                0x10004cc4                __pre_init_runtime_init_spin_locks_reset
  .preinit_array.01100
-                0x10004c30        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/common/pico_sync/mutex.c.o
-                0x10004c30                __pre_init_runtime_init_mutex
+                0x10004cc8        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/common/pico_sync/mutex.c.o
+                0x10004cc8                __pre_init_runtime_init_mutex
  .preinit_array.10080
-                0x10004c34        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
-                0x10004c34                __pre_init_runtime_init_install_ram_vector_table
+                0x10004ccc        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
+                0x10004ccc                __pre_init_runtime_init_install_ram_vector_table
  .preinit_array.11000
-                0x10004c38        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/common/pico_time/time.c.o
-                0x10004c38                __pre_init_runtime_init_default_alarm_pool
+                0x10004cd0        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/common/pico_time/time.c.o
+                0x10004cd0                __pre_init_runtime_init_default_alarm_pool
  .preinit_array.YYYYY
-                0x10004c3c        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o
-                0x10004c3c                __pre_init_first_per_core_initializer
+                0x10004cd4        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o
+                0x10004cd4                __pre_init_first_per_core_initializer
  .preinit_array.ZZZZZ.01200
-                0x10004c40        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_irq/irq.c.o
-                0x10004c40                __pre_init_runtime_init_per_core_irq_priorities
+                0x10004cd8        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_irq/irq.c.o
+                0x10004cd8                __pre_init_runtime_init_per_core_irq_priorities
  *(.preinit_array)
-                0x10004c44                        PROVIDE (__preinit_array_end = .)
-                0x10004c44                        . = ALIGN (0x4)
-                0x10004c44                        PROVIDE (__init_array_start = .)
+                0x10004cdc                        PROVIDE (__preinit_array_end = .)
+                0x10004cdc                        . = ALIGN (0x4)
+                0x10004cdc                        PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array)
- .init_array    0x10004c44        0x4 /Applications/ARM/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/crtbegin.o
-                0x10004c48                        PROVIDE (__init_array_end = .)
-                0x10004c48                        . = ALIGN (0x4)
+ .init_array    0x10004cdc        0x4 /Applications/ARM/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/crtbegin.o
+                0x10004ce0                        PROVIDE (__init_array_end = .)
+                0x10004ce0                        . = ALIGN (0x4)
                 [!provide]                        PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array)
                 [!provide]                        PROVIDE (__fini_array_end = .)
  *(.eh_frame*)
- .eh_frame      0x10004c48        0x0 /Applications/ARM/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/crtbegin.o
-                0x10004c48                        . = ALIGN (0x4)
+ .eh_frame      0x10004ce0        0x0 /Applications/ARM/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/crtbegin.o
+                0x10004ce0                        . = ALIGN (0x4)
 
-.glue_7         0x10004c48        0x0
- .glue_7        0x10004c48        0x0 linker stubs
+.glue_7         0x10004ce0        0x0
+ .glue_7        0x10004ce0        0x0 linker stubs
 
-.glue_7t        0x10004c48        0x0
- .glue_7t       0x10004c48        0x0 linker stubs
+.glue_7t        0x10004ce0        0x0
+ .glue_7t       0x10004ce0        0x0 linker stubs
 
-.vfp11_veneer   0x10004c48        0x0
- .vfp11_veneer  0x10004c48        0x0 linker stubs
+.vfp11_veneer   0x10004ce0        0x0
+ .vfp11_veneer  0x10004ce0        0x0 linker stubs
 
-.v4_bx          0x10004c48        0x0
- .v4_bx         0x10004c48        0x0 linker stubs
+.v4_bx          0x10004ce0        0x0
+ .v4_bx         0x10004ce0        0x0 linker stubs
 
-.iplt           0x10004c48        0x0
- .iplt          0x10004c48        0x0 /Applications/ARM/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/crtbegin.o
+.iplt           0x10004ce0        0x0
+ .iplt          0x10004ce0        0x0 /Applications/ARM/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/crtbegin.o
 
-.rodata         0x10004c48      0x410
+.rodata         0x10004ce0      0x410
  *(EXCLUDE_FILE(*libm.a: *libc.a:*lib_a-mem*.o *libgcc.a:) .rodata*)
  .rodata.update_display.str1.4
-                0x10004c48      0x15c CMakeFiles/mac-gaming.dir/src/main.c.o
+                0x10004ce0      0x15c CMakeFiles/mac-gaming.dir/src/main.c.o
                                  0x17 (size before relaxing)
  .rodata.str1.4
-                0x10004da4       0x2e CMakeFiles/mac-gaming.dir/src/main.c.o
+                0x10004e3c       0x2e CMakeFiles/mac-gaming.dir/src/main.c.o
  .rodata.layer_arrows
-                0x10004da4       0x12 CMakeFiles/mac-gaming.dir/src/main.c.o
- *fill*         0x10004db6        0x2 
+                0x10004e3c       0x12 CMakeFiles/mac-gaming.dir/src/main.c.o
+ *fill*         0x10004e4e        0x2 
  .rodata.layer_wasd
-                0x10004db8       0x12 CMakeFiles/mac-gaming.dir/src/main.c.o
- *fill*         0x10004dca        0x2 
+                0x10004e50       0x12 CMakeFiles/mac-gaming.dir/src/main.c.o
+ *fill*         0x10004e62        0x2 
  .rodata.key_rotation
-                0x10004dcc        0x9 CMakeFiles/mac-gaming.dir/src/main.c.o
- *fill*         0x10004dd5        0x3 
+                0x10004e64        0x9 CMakeFiles/mac-gaming.dir/src/main.c.o
+ *fill*         0x10004e6d        0x3 
  .rodata.row_pins
-                0x10004dd8        0x3 CMakeFiles/mac-gaming.dir/src/matrix.c.o
- *fill*         0x10004ddb        0x1 
+                0x10004e70        0x3 CMakeFiles/mac-gaming.dir/src/matrix.c.o
+ *fill*         0x10004e73        0x1 
  .rodata.col_pins
-                0x10004ddc        0x3 CMakeFiles/mac-gaming.dir/src/matrix.c.o
- *fill*         0x10004ddf        0x1 
+                0x10004e74        0x3 CMakeFiles/mac-gaming.dir/src/matrix.c.o
+ *fill*         0x10004e77        0x1 
  .rodata.encoder_table
-                0x10004de0       0x10 CMakeFiles/mac-gaming.dir/src/encoder.c.o
+                0x10004e78       0x10 CMakeFiles/mac-gaming.dir/src/encoder.c.o
  .rodata.CSWTCH.12
-                0x10004df0       0x38 CMakeFiles/mac-gaming.dir/src/oled.c.o
+                0x10004e88       0x38 CMakeFiles/mac-gaming.dir/src/oled.c.o
  .rodata.font5x7
-                0x10004e28       0x46 CMakeFiles/mac-gaming.dir/src/oled.c.o
+                0x10004ec0       0x46 CMakeFiles/mac-gaming.dir/src/oled.c.o
  .rodata.str1.4
-                0x10004e6e       0x1f CMakeFiles/mac-gaming.dir/src/usb_descriptors.c.o
- *fill*         0x10004e6e        0x2 
+                0x10004f06       0x1f CMakeFiles/mac-gaming.dir/src/usb_descriptors.c.o
+ *fill*         0x10004f06        0x2 
  .rodata.__compound_literal.0
-                0x10004e70        0x2 CMakeFiles/mac-gaming.dir/src/usb_descriptors.c.o
- *fill*         0x10004e72        0x2 
+                0x10004f08        0x2 CMakeFiles/mac-gaming.dir/src/usb_descriptors.c.o
+ *fill*         0x10004f0a        0x2 
  .rodata.desc_configuration
-                0x10004e74       0x22 CMakeFiles/mac-gaming.dir/src/usb_descriptors.c.o
-                0x10004e74                desc_configuration
- *fill*         0x10004e96        0x2 
+                0x10004f0c       0x22 CMakeFiles/mac-gaming.dir/src/usb_descriptors.c.o
+                0x10004f0c                desc_configuration
+ *fill*         0x10004f2e        0x2 
  .rodata.desc_device
-                0x10004e98       0x12 CMakeFiles/mac-gaming.dir/src/usb_descriptors.c.o
-                0x10004e98                desc_device
- *fill*         0x10004eaa        0x2 
+                0x10004f30       0x12 CMakeFiles/mac-gaming.dir/src/usb_descriptors.c.o
+                0x10004f30                desc_device
+ *fill*         0x10004f42        0x2 
  .rodata.desc_hid_report
-                0x10004eac       0x5c CMakeFiles/mac-gaming.dir/src/usb_descriptors.c.o
-                0x10004eac                desc_hid_report
+                0x10004f44       0x5c CMakeFiles/mac-gaming.dir/src/usb_descriptors.c.o
+                0x10004f44                desc_hid_report
  .rodata.panic.str1.4
-                0x10004f08       0x12 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o
+                0x10004fa0       0x12 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o
  .rodata.spin_lock_claim_unused.str1.4
-                0x10004f08       0x1b CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_sync/sync.c.o
+                0x10004fa0       0x1b CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_sync/sync.c.o
  .rodata.timer_hardware_alarm_claim.str1.4
-                0x10004f08       0x22 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_timer/timer.c.o
+                0x10004fa0       0x22 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_timer/timer.c.o
  .rodata.hard_assertion_failure.str1.4
-                0x10004f08        0xc CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o
+                0x10004fa0        0xc CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o
  .rodata.str1.4
-                0x10004f08       0x40 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
+                0x10004fa0       0x40 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
  .rodata.__bi_84
-                0x10004f08        0xc CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
+                0x10004fa0        0xc CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
  .rodata.__bi_78
-                0x10004f14        0xc CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
+                0x10004fac        0xc CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
  .rodata.__bi_54
-                0x10004f20        0xc CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
+                0x10004fb8        0xc CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
  .rodata.__bi_48
-                0x10004f2c        0xc CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
+                0x10004fc4        0xc CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
  .rodata.__bi_42
-                0x10004f38        0xc CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
+                0x10004fd0        0xc CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
  .rodata.__bi_34
-                0x10004f44        0xc CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
+                0x10004fdc        0xc CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
  .rodata.__bi_26
-                0x10004f50        0xc CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
+                0x10004fe8        0xc CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
  .rodata.crlf_str.0
-                0x10004f5c        0x2 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o
+                0x10004ff4        0x2 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o
  .rodata.str1.4
-                0x10004f5e       0x14 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
+                0x10004ff6       0x14 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
  .rodata.str1.4
-                0x10004f5e       0x48 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o
- *fill*         0x10004f5e        0x2 
+                0x10004ff6       0x48 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o
+ *fill*         0x10004ff6        0x2 
  .rodata.tud_task_ext
-                0x10004f60       0x8c CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/device/usbd.c.o
- .rodata        0x10004fec       0x1c CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/device/usbd.c.o
+                0x10004ff8       0x8c CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/device/usbd.c.o
+ .rodata        0x10005084       0x1c CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/device/usbd.c.o
  .rodata._usbd_driver
-                0x10005008       0x20 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/device/usbd.c.o
+                0x100050a0       0x20 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/device/usbd.c.o
  .rodata.hidd_control_xfer_cb
-                0x10005028       0x30 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o
-                0x10005058                        . = ALIGN (0x4)
+                0x100050c0       0x30 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o
+                0x100050f0                        . = ALIGN (0x4)
  *(SORT_BY_ALIGNMENT(SORT_BY_NAME(.flashdata*)))
-                0x10005058                        . = ALIGN (0x4)
+                0x100050f0                        . = ALIGN (0x4)
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x10005058                        __exidx_start = .
+                0x100050f0                        __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x10005058                        __exidx_end = .
-                0x10005058                        . = ALIGN (0x4)
-                0x10005058                        __binary_info_start = .
+                0x100050f0                        __exidx_end = .
+                0x100050f0                        . = ALIGN (0x4)
+                0x100050f0                        __binary_info_start = .
 
-.binary_info    0x10005058       0x1c
+.binary_info    0x100050f0       0x1c
  *(.binary_info.keep.*)
  .binary_info.keep.__bi_ptr84
-                0x10005058        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
+                0x100050f0        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
  .binary_info.keep.__bi_ptr78
-                0x1000505c        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
+                0x100050f4        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
  .binary_info.keep.__bi_ptr54
-                0x10005060        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
+                0x100050f8        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
  .binary_info.keep.__bi_ptr48
-                0x10005064        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
+                0x100050fc        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
  .binary_info.keep.__bi_ptr42
-                0x10005068        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
+                0x10005100        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
  .binary_info.keep.__bi_ptr34
-                0x1000506c        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
+                0x10005104        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
  .binary_info.keep.__bi_ptr26
-                0x10005070        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
+                0x10005108        0x4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
  *(.binary_info.*)
-                0x10005074                        __binary_info_end = .
-                0x10005074                        . = ALIGN (0x4)
+                0x1000510c                        __binary_info_end = .
+                0x1000510c                        . = ALIGN (0x4)
 
 .ram_vector_table
                 0x20000000       0xc0
@@ -3483,7 +3483,7 @@ LOAD /Applications/ARM/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-
                 0x200000c0                        . = ALIGN (0x4)
  *(.uninitialized_data*)
 
-.data           0x200000c0      0xe28 load address 0x10005074
+.data           0x200000c0      0xe28 load address 0x1000510c
                 0x200000c0                        __data_start__ = .
  *(vtable)
  *(.time_critical*)
@@ -3580,23 +3580,23 @@ LOAD /Applications/ARM/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-
                 0x20000ee8                        . = ALIGN (0x4)
 
 .tm_clone_table
-                0x20000ee8        0x0 load address 0x10005e9c
+                0x20000ee8        0x0 load address 0x10005f34
  .tm_clone_table
                 0x20000ee8        0x0 /Applications/ARM/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/crtbegin.o
  .tm_clone_table
                 0x20000ee8        0x0 /Applications/ARM/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/crtend.o
 
-.igot.plt       0x20000ee8        0x0 load address 0x10005e9c
+.igot.plt       0x20000ee8        0x0 load address 0x10005f34
  .igot.plt      0x20000ee8        0x0 /Applications/ARM/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/crtbegin.o
 
-.tdata          0x20000ee8        0x0 load address 0x10005e9c
+.tdata          0x20000ee8        0x0 load address 0x10005f34
                 0x20000ee8                        . = ALIGN (0x4)
  *(.tdata .tdata.* .gnu.linkonce.td.*)
                 0x20000ee8                        __tdata_end = .
                 0x20000ee8                        PROVIDE (__data_end__ = .)
-                0x10005074                        __etext = LOADADDR (.data)
+                0x1000510c                        __etext = LOADADDR (.data)
 
-.tbss           0x20000ee8        0x0 load address 0x10005e9c
+.tbss           0x20000ee8        0x0 load address 0x10005f34
                 0x20000ee8                        . = ALIGN (0x4)
                 0x20000ee8                        __bss_start__ = .
                 0x20000ee8                        __tls_base = .
@@ -3604,7 +3604,7 @@ LOAD /Applications/ARM/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-
  *(.tcommon)
                 0x20000ee8                        __tls_end = .
 
-.bss            0x20000ee8      0xc6c load address 0x10005e9c
+.bss            0x20000ee8      0xc6c load address 0x10005f34
                 0x20000ee8                        . = ALIGN (0x4)
                 0x20000ee8                        __tbss_end = .
  *(SORT_BY_ALIGNMENT(SORT_BY_NAME(.bss*)))
@@ -3694,26 +3694,26 @@ LOAD /Applications/ARM/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-
  *fill*         0x20001b53        0x1 
                 0x20001b54                        __bss_end__ = .
 
-.heap           0x20001b54      0x800 load address 0x10005e9c
+.heap           0x20001b54      0x800 load address 0x10005f34
                 0x20001b54                        __end__ = .
                 0x20001b54                        end = __end__
  *(.heap*)
  .heap          0x20001b54      0x800 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o
                 0x20040000                        __HeapLimit = (ORIGIN (RAM) + LENGTH (RAM))
 
-.scratch_x      0x20040000        0x0 load address 0x10005e9c
+.scratch_x      0x20040000        0x0 load address 0x10005f34
                 0x20040000                        __scratch_x_start__ = .
  *(.scratch_x.*)
                 0x20040000                        . = ALIGN (0x4)
                 0x20040000                        __scratch_x_end__ = .
-                0x10005e9c                        __scratch_x_source__ = LOADADDR (.scratch_x)
+                0x10005f34                        __scratch_x_source__ = LOADADDR (.scratch_x)
 
-.scratch_y      0x20041000        0x0 load address 0x10005e9c
+.scratch_y      0x20041000        0x0 load address 0x10005f34
                 0x20041000                        __scratch_y_start__ = .
  *(.scratch_y.*)
                 0x20041000                        . = ALIGN (0x4)
                 0x20041000                        __scratch_y_end__ = .
-                0x10005e9c                        __scratch_y_source__ = LOADADDR (.scratch_y)
+                0x10005f34                        __scratch_y_source__ = LOADADDR (.scratch_y)
 
 .stack1_dummy
  *(.stack1*)
@@ -3725,9 +3725,9 @@ LOAD /Applications/ARM/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-
 .rel.dyn        0x20041800        0x0
  .rel.iplt      0x20041800        0x0 /Applications/ARM/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/crtbegin.o
 
-.flash_end      0x10005e9c        0x0
+.flash_end      0x10005f34        0x0
  *(.embedded_end_block*)
-                0x10005e9c                        PROVIDE (__flash_binary_end = .)
+                0x10005f34                        PROVIDE (__flash_binary_end = .)
                 0x20040000                        __StackLimit = (ORIGIN (RAM) + LENGTH (RAM))
                 0x20041000                        __StackOneTop = (ORIGIN (SCRATCH_X) + LENGTH (SCRATCH_X))
                 0x20042000                        __StackTop = (ORIGIN (SCRATCH_Y) + LENGTH (SCRATCH_Y))
@@ -3997,55 +3997,55 @@ LOAD linker stubs
  .comment       0x00000044       0x45 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/tusb.c.o
  .comment       0x00000044       0x45 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o
 
-.debug_info     0x00000000    0x3447c
+.debug_info     0x00000000    0x34cf9
  .debug_info    0x00000000      0x974 CMakeFiles/mac-gaming.dir/src/main.c.o
  .debug_info    0x00000974      0xd06 CMakeFiles/mac-gaming.dir/src/matrix.c.o
  .debug_info    0x0000167a      0x9ea CMakeFiles/mac-gaming.dir/src/encoder.c.o
- .debug_info    0x00002064     0x847e CMakeFiles/mac-gaming.dir/src/oled.c.o
- .debug_info    0x0000a4e2      0x6c6 CMakeFiles/mac-gaming.dir/src/usb_hid.c.o
- .debug_info    0x0000aba8      0xa92 CMakeFiles/mac-gaming.dir/src/usb_descriptors.c.o
- .debug_info    0x0000b63a     0x2429 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o
- .debug_info    0x0000da63      0x129 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2040/pico_platform/platform.c.o
- .debug_info    0x0000db8c      0x1bf CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o
- .debug_info    0x0000dd4b      0x99d CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/common/hardware_claim/claim.c.o
- .debug_info    0x0000e6e8      0x458 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_sync/sync.c.o
- .debug_info    0x0000eb40      0x245 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
- .debug_info    0x0000ed85     0x2231 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_irq/irq.c.o
- .debug_info    0x00010fb6      0x15f CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/common/pico_sync/lock_core.c.o
- .debug_info    0x00011115     0x2831 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/common/pico_sync/mutex.c.o
- .debug_info    0x00013946      0x308 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/common/pico_sync/critical_section.c.o
- .debug_info    0x00013c4e     0x48af CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/common/pico_time/time.c.o
- .debug_info    0x000184fd     0x2b37 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_timer/timer.c.o
- .debug_info    0x0001b034     0x29ce CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o
- .debug_info    0x0001da02      0x4e5 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_pll/pll.c.o
- .debug_info    0x0001dee7      0x248 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o
- .debug_info    0x0001e12f      0x678 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o
- .debug_info    0x0001e7a7      0x1d0 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o
- .debug_info    0x0001e977      0x21a CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o
- .debug_info    0x0001eb91      0x7ea CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
- .debug_info    0x0001f37b      0x780 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
- .debug_info    0x0001fafb       0x23 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o
- .debug_info    0x0001fb1e       0x23 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o
- .debug_info    0x0001fb41       0x23 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o
- .debug_info    0x0001fb64      0x28a CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o
- .debug_info    0x0001fdee       0x23 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o
- .debug_info    0x0001fe11       0x24 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o
- .debug_info    0x0001fe35       0x23 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o
- .debug_info    0x0001fe58      0x28a CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o
- .debug_info    0x000200e2       0x23 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o
- .debug_info    0x00020105       0x23 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o
- .debug_info    0x00020128      0x2b8 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
- .debug_info    0x000203e0     0x211a CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_printf/printf.c.o
- .debug_info    0x000224fa       0x23 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o
- .debug_info    0x0002251d      0xbbe CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o
- .debug_info    0x000230db     0x1bb3 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o
- .debug_info    0x00024c8e     0x2b40 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
- .debug_info    0x000277ce     0x117c CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o
- .debug_info    0x0002894a     0x498b CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/device/usbd.c.o
- .debug_info    0x0002d2d5      0xb66 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o
- .debug_info    0x0002de3b     0x1f29 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o
- .debug_info    0x0002fd64     0x1ed5 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/tusb.c.o
- .debug_info    0x00031c39     0x2843 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o
+ .debug_info    0x00002064     0x8cfb CMakeFiles/mac-gaming.dir/src/oled.c.o
+ .debug_info    0x0000ad5f      0x6c6 CMakeFiles/mac-gaming.dir/src/usb_hid.c.o
+ .debug_info    0x0000b425      0xa92 CMakeFiles/mac-gaming.dir/src/usb_descriptors.c.o
+ .debug_info    0x0000beb7     0x2429 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o
+ .debug_info    0x0000e2e0      0x129 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2040/pico_platform/platform.c.o
+ .debug_info    0x0000e409      0x1bf CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o
+ .debug_info    0x0000e5c8      0x99d CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/common/hardware_claim/claim.c.o
+ .debug_info    0x0000ef65      0x458 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_sync/sync.c.o
+ .debug_info    0x0000f3bd      0x245 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
+ .debug_info    0x0000f602     0x2231 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_irq/irq.c.o
+ .debug_info    0x00011833      0x15f CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/common/pico_sync/lock_core.c.o
+ .debug_info    0x00011992     0x2831 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/common/pico_sync/mutex.c.o
+ .debug_info    0x000141c3      0x308 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/common/pico_sync/critical_section.c.o
+ .debug_info    0x000144cb     0x48af CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/common/pico_time/time.c.o
+ .debug_info    0x00018d7a     0x2b37 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_timer/timer.c.o
+ .debug_info    0x0001b8b1     0x29ce CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o
+ .debug_info    0x0001e27f      0x4e5 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_pll/pll.c.o
+ .debug_info    0x0001e764      0x248 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o
+ .debug_info    0x0001e9ac      0x678 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o
+ .debug_info    0x0001f024      0x1d0 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o
+ .debug_info    0x0001f1f4      0x21a CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o
+ .debug_info    0x0001f40e      0x7ea CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
+ .debug_info    0x0001fbf8      0x780 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
+ .debug_info    0x00020378       0x23 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o
+ .debug_info    0x0002039b       0x23 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o
+ .debug_info    0x000203be       0x23 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o
+ .debug_info    0x000203e1      0x28a CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o
+ .debug_info    0x0002066b       0x23 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o
+ .debug_info    0x0002068e       0x24 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o
+ .debug_info    0x000206b2       0x23 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o
+ .debug_info    0x000206d5      0x28a CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o
+ .debug_info    0x0002095f       0x23 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o
+ .debug_info    0x00020982       0x23 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o
+ .debug_info    0x000209a5      0x2b8 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
+ .debug_info    0x00020c5d     0x211a CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_printf/printf.c.o
+ .debug_info    0x00022d77       0x23 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o
+ .debug_info    0x00022d9a      0xbbe CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o
+ .debug_info    0x00023958     0x1bb3 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o
+ .debug_info    0x0002550b     0x2b40 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
+ .debug_info    0x0002804b     0x117c CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o
+ .debug_info    0x000291c7     0x498b CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/device/usbd.c.o
+ .debug_info    0x0002db52      0xb66 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o
+ .debug_info    0x0002e6b8     0x1f29 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o
+ .debug_info    0x000305e1     0x1ed5 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/tusb.c.o
+ .debug_info    0x000324b6     0x2843 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o
 
 .debug_abbrev   0x00000000     0x7e65
  .debug_abbrev  0x00000000      0x2ab CMakeFiles/mac-gaming.dir/src/main.c.o
@@ -4098,7 +4098,7 @@ LOAD linker stubs
  .debug_abbrev  0x00007a46      0x41f CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o
 
 .debug_loclists
-                0x00000000    0x1c362
+                0x00000000    0x1c70b
  .debug_loclists
                 0x00000000      0x192 CMakeFiles/mac-gaming.dir/src/main.c.o
  .debug_loclists
@@ -4106,73 +4106,73 @@ LOAD linker stubs
  .debug_loclists
                 0x000006e8      0x10f CMakeFiles/mac-gaming.dir/src/encoder.c.o
  .debug_loclists
-                0x000007f7     0x3888 CMakeFiles/mac-gaming.dir/src/oled.c.o
+                0x000007f7     0x3c31 CMakeFiles/mac-gaming.dir/src/oled.c.o
  .debug_loclists
-                0x0000407f      0x126 CMakeFiles/mac-gaming.dir/src/usb_hid.c.o
+                0x00004428      0x126 CMakeFiles/mac-gaming.dir/src/usb_hid.c.o
  .debug_loclists
-                0x000041a5       0xfd CMakeFiles/mac-gaming.dir/src/usb_descriptors.c.o
+                0x0000454e       0xfd CMakeFiles/mac-gaming.dir/src/usb_descriptors.c.o
  .debug_loclists
-                0x000042a2     0x19c2 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o
+                0x0000464b     0x19c2 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o
  .debug_loclists
-                0x00005c64       0x53 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2040/pico_platform/platform.c.o
+                0x0000600d       0x53 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2040/pico_platform/platform.c.o
  .debug_loclists
-                0x00005cb7      0x36e CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/common/hardware_claim/claim.c.o
+                0x00006060      0x36e CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/common/hardware_claim/claim.c.o
  .debug_loclists
-                0x00006025       0xf1 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_sync/sync.c.o
+                0x000063ce       0xf1 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_sync/sync.c.o
  .debug_loclists
-                0x00006116       0x7d CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
+                0x000064bf       0x7d CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
  .debug_loclists
-                0x00006193     0x11bf CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_irq/irq.c.o
+                0x0000653c     0x11bf CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_irq/irq.c.o
  .debug_loclists
-                0x00007352       0x41 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/common/pico_sync/lock_core.c.o
+                0x000076fb       0x41 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/common/pico_sync/lock_core.c.o
  .debug_loclists
-                0x00007393      0xafa CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/common/pico_sync/mutex.c.o
+                0x0000773c      0xafa CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/common/pico_sync/mutex.c.o
  .debug_loclists
-                0x00007e8d       0xb6 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/common/pico_sync/critical_section.c.o
+                0x00008236       0xb6 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/common/pico_sync/critical_section.c.o
  .debug_loclists
-                0x00007f43     0x24c9 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/common/pico_time/time.c.o
+                0x000082ec     0x24c9 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/common/pico_time/time.c.o
  .debug_loclists
-                0x0000a40c     0x1a17 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_timer/timer.c.o
+                0x0000a7b5     0x1a17 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_timer/timer.c.o
  .debug_loclists
-                0x0000be23     0x2ad7 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o
+                0x0000c1cc     0x2ad7 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o
  .debug_loclists
-                0x0000e8fa      0x1e0 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_pll/pll.c.o
+                0x0000eca3      0x1e0 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_pll/pll.c.o
  .debug_loclists
-                0x0000eada       0x47 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o
+                0x0000ee83       0x47 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o
  .debug_loclists
-                0x0000eb21      0x399 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o
+                0x0000eeca      0x399 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o
  .debug_loclists
-                0x0000eeba       0x48 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o
+                0x0000f263       0x48 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o
  .debug_loclists
-                0x0000ef02       0x7e CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o
+                0x0000f2ab       0x7e CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o
  .debug_loclists
-                0x0000ef80      0x139 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
+                0x0000f329      0x139 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
  .debug_loclists
-                0x0000f0b9       0x74 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
+                0x0000f462       0x74 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
  .debug_loclists
-                0x0000f12d       0x3d CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o
+                0x0000f4d6       0x3d CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o
  .debug_loclists
-                0x0000f16a       0x59 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o
+                0x0000f513       0x59 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o
  .debug_loclists
-                0x0000f1c3     0x2f65 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_printf/printf.c.o
+                0x0000f56c     0x2f65 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_printf/printf.c.o
  .debug_loclists
-                0x00012128      0x44e CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o
+                0x000124d1      0x44e CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o
  .debug_loclists
-                0x00012576      0xe8b CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o
+                0x0001291f      0xe8b CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o
  .debug_loclists
-                0x00013401     0x1c77 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
+                0x000137aa     0x1c77 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
  .debug_loclists
-                0x00015078      0x734 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o
+                0x00015421      0x734 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o
  .debug_loclists
-                0x000157ac     0x2202 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/device/usbd.c.o
+                0x00015b55     0x2202 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/device/usbd.c.o
  .debug_loclists
-                0x000179ae      0x43b CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o
+                0x00017d57      0x43b CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o
  .debug_loclists
-                0x00017de9     0x15b9 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o
+                0x00018192     0x15b9 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o
  .debug_loclists
-                0x000193a2      0xfa4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/tusb.c.o
+                0x0001974b      0xfa4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/tusb.c.o
  .debug_loclists
-                0x0001a346     0x201c CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o
+                0x0001a6ef     0x201c CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o
 
 .debug_aranges  0x00000000     0x1518
  .debug_aranges
@@ -4273,7 +4273,7 @@ LOAD linker stubs
                 0x00001468       0xb0 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o
 
 .debug_rnglists
-                0x00000000     0x4a52
+                0x00000000     0x4afa
  .debug_rnglists
                 0x00000000       0x9a CMakeFiles/mac-gaming.dir/src/main.c.o
  .debug_rnglists
@@ -4281,141 +4281,141 @@ LOAD linker stubs
  .debug_rnglists
                 0x0000021e       0x40 CMakeFiles/mac-gaming.dir/src/encoder.c.o
  .debug_rnglists
-                0x0000025e      0xb69 CMakeFiles/mac-gaming.dir/src/oled.c.o
+                0x0000025e      0xc11 CMakeFiles/mac-gaming.dir/src/oled.c.o
  .debug_rnglists
-                0x00000dc7       0x70 CMakeFiles/mac-gaming.dir/src/usb_hid.c.o
+                0x00000e6f       0x70 CMakeFiles/mac-gaming.dir/src/usb_hid.c.o
  .debug_rnglists
-                0x00000e37       0x3d CMakeFiles/mac-gaming.dir/src/usb_descriptors.c.o
+                0x00000edf       0x3d CMakeFiles/mac-gaming.dir/src/usb_descriptors.c.o
  .debug_rnglists
-                0x00000e74      0x5c1 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o
+                0x00000f1c      0x5c1 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o
  .debug_rnglists
-                0x00001435       0x13 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2040/pico_platform/platform.c.o
+                0x000014dd       0x13 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2040/pico_platform/platform.c.o
  .debug_rnglists
-                0x00001448       0x19 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o
+                0x000014f0       0x19 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o
  .debug_rnglists
-                0x00001461       0xc5 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/common/hardware_claim/claim.c.o
+                0x00001509       0xc5 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/common/hardware_claim/claim.c.o
  .debug_rnglists
-                0x00001526       0x67 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_sync/sync.c.o
+                0x000015ce       0x67 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_sync/sync.c.o
  .debug_rnglists
-                0x0000158d       0x3d CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
+                0x00001635       0x3d CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
  .debug_rnglists
-                0x000015ca      0x376 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_irq/irq.c.o
+                0x00001672      0x376 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_irq/irq.c.o
  .debug_rnglists
-                0x00001940       0x1f CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/common/pico_sync/lock_core.c.o
+                0x000019e8       0x1f CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/common/pico_sync/lock_core.c.o
  .debug_rnglists
-                0x0000195f      0x32c CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/common/pico_sync/mutex.c.o
+                0x00001a07      0x32c CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/common/pico_sync/mutex.c.o
  .debug_rnglists
-                0x00001c8b       0x2b CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/common/pico_sync/critical_section.c.o
+                0x00001d33       0x2b CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/common/pico_sync/critical_section.c.o
  .debug_rnglists
-                0x00001cb6      0x72a CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/common/pico_time/time.c.o
+                0x00001d5e      0x72a CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/common/pico_time/time.c.o
  .debug_rnglists
-                0x000023e0      0x2c6 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_timer/timer.c.o
+                0x00002488      0x2c6 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_timer/timer.c.o
  .debug_rnglists
-                0x000026a6      0x53e CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o
+                0x0000274e      0x53e CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o
  .debug_rnglists
-                0x00002be4       0x5c CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_pll/pll.c.o
+                0x00002c8c       0x5c CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_pll/pll.c.o
  .debug_rnglists
-                0x00002c40       0x2b CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o
+                0x00002ce8       0x2b CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o
  .debug_rnglists
-                0x00002c6b      0x11b CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o
+                0x00002d13      0x11b CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o
  .debug_rnglists
-                0x00002d86       0x1f CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o
+                0x00002e2e       0x1f CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o
  .debug_rnglists
-                0x00002da5       0x3d CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o
+                0x00002e4d       0x3d CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o
  .debug_rnglists
-                0x00002de2       0x4a CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
+                0x00002e8a       0x4a CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
  .debug_rnglists
-                0x00002e2c       0x20 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
+                0x00002ed4       0x20 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
  .debug_rnglists
-                0x00002e4c       0x43 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o
+                0x00002ef4       0x43 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o
  .debug_rnglists
-                0x00002e8f       0x2c CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o
+                0x00002f37       0x2c CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o
  .debug_rnglists
-                0x00002ebb       0xf9 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o
+                0x00002f63       0xf9 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o
  .debug_rnglists
-                0x00002fb4       0x14 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o
+                0x0000305c       0x14 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o
  .debug_rnglists
-                0x00002fc8       0x99 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o
+                0x00003070       0x99 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o
  .debug_rnglists
-                0x00003061       0xe5 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o
+                0x00003109       0xe5 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o
  .debug_rnglists
-                0x00003146       0x13 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o
+                0x000031ee       0x13 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o
  .debug_rnglists
-                0x00003159       0x38 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o
+                0x00003201       0x38 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o
  .debug_rnglists
-                0x00003191       0x25 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o
+                0x00003239       0x25 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o
  .debug_rnglists
-                0x000031b6      0x27c CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_printf/printf.c.o
+                0x0000325e      0x27c CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_printf/printf.c.o
  .debug_rnglists
-                0x00003432       0x1b CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o
+                0x000034da       0x1b CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o
  .debug_rnglists
-                0x0000344d       0x85 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o
+                0x000034f5       0x85 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o
  .debug_rnglists
-                0x000034d2      0x297 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o
+                0x0000357a      0x297 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o
  .debug_rnglists
-                0x00003769      0x41e CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
+                0x00003811      0x41e CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
  .debug_rnglists
-                0x00003b87       0xec CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o
+                0x00003c2f       0xec CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o
  .debug_rnglists
-                0x00003c73      0x5ff CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/device/usbd.c.o
+                0x00003d1b      0x5ff CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/device/usbd.c.o
  .debug_rnglists
-                0x00004272       0x8e CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o
+                0x0000431a       0x8e CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o
  .debug_rnglists
-                0x00004300      0x182 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o
+                0x000043a8      0x182 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o
  .debug_rnglists
-                0x00004482      0x1ec CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/tusb.c.o
+                0x0000452a      0x1ec CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/tusb.c.o
  .debug_rnglists
-                0x0000466e      0x3e4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o
+                0x00004716      0x3e4 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o
 
-.debug_line     0x00000000    0x24276
+.debug_line     0x00000000    0x24612
  .debug_line    0x00000000      0x515 CMakeFiles/mac-gaming.dir/src/main.c.o
  .debug_line    0x00000515      0x9cb CMakeFiles/mac-gaming.dir/src/matrix.c.o
  .debug_line    0x00000ee0      0x46b CMakeFiles/mac-gaming.dir/src/encoder.c.o
- .debug_line    0x0000134b     0x3ffa CMakeFiles/mac-gaming.dir/src/oled.c.o
- .debug_line    0x00005345      0x429 CMakeFiles/mac-gaming.dir/src/usb_hid.c.o
- .debug_line    0x0000576e      0x368 CMakeFiles/mac-gaming.dir/src/usb_descriptors.c.o
- .debug_line    0x00005ad6     0x1c58 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o
- .debug_line    0x0000772e      0x240 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2040/pico_platform/platform.c.o
- .debug_line    0x0000796e      0x248 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o
- .debug_line    0x00007bb6      0x92b CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/common/hardware_claim/claim.c.o
- .debug_line    0x000084e1      0x4ba CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_sync/sync.c.o
- .debug_line    0x0000899b      0x39d CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
- .debug_line    0x00008d38     0x17f0 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_irq/irq.c.o
- .debug_line    0x0000a528      0x2c8 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/common/pico_sync/lock_core.c.o
- .debug_line    0x0000a7f0     0x1b6d CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/common/pico_sync/mutex.c.o
- .debug_line    0x0000c35d      0x401 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/common/pico_sync/critical_section.c.o
- .debug_line    0x0000c75e     0x310f CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/common/pico_time/time.c.o
- .debug_line    0x0000f86d     0x1d95 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_timer/timer.c.o
- .debug_line    0x00011602     0x1f49 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o
- .debug_line    0x0001354b      0x501 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_pll/pll.c.o
- .debug_line    0x00013a4c      0x327 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o
- .debug_line    0x00013d73      0x458 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o
- .debug_line    0x000141cb      0x342 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o
- .debug_line    0x0001450d      0x2f7 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o
- .debug_line    0x00014804      0x6e7 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
- .debug_line    0x00014eeb      0x577 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
- .debug_line    0x00015462      0x108 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o
- .debug_line    0x0001556a      0x2a9 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o
- .debug_line    0x00015813      0x452 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o
- .debug_line    0x00015c65      0x4a2 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o
- .debug_line    0x00016107      0x66d CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o
- .debug_line    0x00016774       0x61 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o
- .debug_line    0x000167d5      0x3d2 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o
- .debug_line    0x00016ba7      0x3b7 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o
- .debug_line    0x00016f5e      0x195 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o
- .debug_line    0x000170f3       0x94 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o
- .debug_line    0x00017187      0x1ce CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
- .debug_line    0x00017355     0x1b32 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_printf/printf.c.o
- .debug_line    0x00018e87       0xa2 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o
- .debug_line    0x00018f29      0x8ad CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o
- .debug_line    0x000197d6     0x142c CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o
- .debug_line    0x0001ac02     0x1ee1 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
- .debug_line    0x0001cae3      0xd00 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o
- .debug_line    0x0001d7e3     0x2873 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/device/usbd.c.o
- .debug_line    0x00020056      0x68d CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o
- .debug_line    0x000206e3      0xeab CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o
- .debug_line    0x0002158e     0x1260 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/tusb.c.o
- .debug_line    0x000227ee     0x1a88 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o
+ .debug_line    0x0000134b     0x4396 CMakeFiles/mac-gaming.dir/src/oled.c.o
+ .debug_line    0x000056e1      0x429 CMakeFiles/mac-gaming.dir/src/usb_hid.c.o
+ .debug_line    0x00005b0a      0x368 CMakeFiles/mac-gaming.dir/src/usb_descriptors.c.o
+ .debug_line    0x00005e72     0x1c58 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o
+ .debug_line    0x00007aca      0x240 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2040/pico_platform/platform.c.o
+ .debug_line    0x00007d0a      0x248 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o
+ .debug_line    0x00007f52      0x92b CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/common/hardware_claim/claim.c.o
+ .debug_line    0x0000887d      0x4ba CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_sync/sync.c.o
+ .debug_line    0x00008d37      0x39d CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
+ .debug_line    0x000090d4     0x17f0 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_irq/irq.c.o
+ .debug_line    0x0000a8c4      0x2c8 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/common/pico_sync/lock_core.c.o
+ .debug_line    0x0000ab8c     0x1b6d CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/common/pico_sync/mutex.c.o
+ .debug_line    0x0000c6f9      0x401 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/common/pico_sync/critical_section.c.o
+ .debug_line    0x0000cafa     0x310f CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/common/pico_time/time.c.o
+ .debug_line    0x0000fc09     0x1d95 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_timer/timer.c.o
+ .debug_line    0x0001199e     0x1f49 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o
+ .debug_line    0x000138e7      0x501 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_pll/pll.c.o
+ .debug_line    0x00013de8      0x327 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o
+ .debug_line    0x0001410f      0x458 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o
+ .debug_line    0x00014567      0x342 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o
+ .debug_line    0x000148a9      0x2f7 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o
+ .debug_line    0x00014ba0      0x6e7 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
+ .debug_line    0x00015287      0x577 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
+ .debug_line    0x000157fe      0x108 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o
+ .debug_line    0x00015906      0x2a9 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o
+ .debug_line    0x00015baf      0x452 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o
+ .debug_line    0x00016001      0x4a2 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o
+ .debug_line    0x000164a3      0x66d CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o
+ .debug_line    0x00016b10       0x61 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o
+ .debug_line    0x00016b71      0x3d2 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o
+ .debug_line    0x00016f43      0x3b7 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o
+ .debug_line    0x000172fa      0x195 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o
+ .debug_line    0x0001748f       0x94 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o
+ .debug_line    0x00017523      0x1ce CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
+ .debug_line    0x000176f1     0x1b32 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_printf/printf.c.o
+ .debug_line    0x00019223       0xa2 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o
+ .debug_line    0x000192c5      0x8ad CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o
+ .debug_line    0x00019b72     0x142c CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o
+ .debug_line    0x0001af9e     0x1ee1 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
+ .debug_line    0x0001ce7f      0xd00 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o
+ .debug_line    0x0001db7f     0x2873 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/device/usbd.c.o
+ .debug_line    0x000203f2      0x68d CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o
+ .debug_line    0x00020a7f      0xeab CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.o
+ .debug_line    0x0002192a     0x1260 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/tusb.c.o
+ .debug_line    0x00022b8a     0x1a88 CMakeFiles/mac-gaming.dir/Users/aryachakrabarti/Desktop/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o
 
 .debug_str      0x00000000     0x88ae
  .debug_str     0x00000000     0x88ae CMakeFiles/mac-gaming.dir/src/main.c.o

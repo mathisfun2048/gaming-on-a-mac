@@ -340,12 +340,14 @@ bool oled_init(void) {
     oled_command(0x00); // memory mode is going to be horizontal -> this allows us to write down addresses for each col in a page, and then span that out for a page, and when done, wrap to the next page
     oled_command(0xA1); // segment remap: we flip it horizontally (this is because of the physical wiring of my oled)
     oled_command(0xC8); // COM scan direction (flip vertically) -> same reason, flip because of teh physical wiring
+    oled_command(0xDA); // ** COM pins hardware configuration
+    oled_command(0x02); // for 128x32: sequential COM pin config, disable left/right remap
     oled_command(0x81); // ** contrast!
     oled_command(0x8F); // sets contrast at 143/255
     oled_command(0xD9); // ** starts pre-charge period: charges OLED capacitors before writing data (oleds are technichally a capacitor)
     oled_command(0xF1); // defines precharge period: 1 discharge time, 15 precharge time -> bright but mildly slow
-    oled_command(0xD8); // ** VCOMH deselect: sets voltage for unlit pixels
-    oled_command(0x40); // sets VCOMH deselct 
+    oled_command(0xDB); // ** VCOMH deselect: sets voltage for unlit pixels
+    oled_command(0x40); // sets VCOMH deselect level to ~0.77 x VCC 
     oled_command(0xA4); // display RAM content display
     oled_command(0xA6); // normal display, not inverted (inverse means taht 0 -> on, 1 -> off) 
     oled_command(0xAF); // turns the display on!
